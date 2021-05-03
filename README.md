@@ -159,7 +159,9 @@ espressione utilizzata: (Menu: Visualizza | Decorazioni | Etichetta Titolo ...)
 WMS Catasto Agenzia delle Entrate - CC BY 4.0 - [% @map_crs ||': '|| @map_crs_description %]
 ```
 
+![](imgs/titolo.png)
 ![](imgs/dec_eti_titolo.png)
+
 
 ## Servizio WMS
 
@@ -228,7 +230,7 @@ def get_parcel_info2(xx, yy, EPSG, feature, parent):
       <li>get_parcel_info("fieldX", "fieldY",'EPSG:3045') -> 'IT.AGE.PLA.G273_0033A0.673'</li>
       <li>get_parcel_info("fieldX", "fieldY",@project_crs) -> 'IT.AGE.PLA.G273_0033A0.673'</li>
     </ul>
-    <h2>NB: le coordinate X e Y devono essere espresse nel EPSG utilizzato (gli EPSG disponibili sono:6706,4258,25832/3/4,3044/5/6)</h2>
+    <h2>NB: le coordinate X e Y devono essere espresse nel EPSG utilizzato (gli EPSG disponibili sono:25832/3/4,3044/5/6)</h2>
     """
     req = "https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php?REQUEST=GetFeatureInfo&SERVICE=WMS&SRS="+EPSG+"&STYLES=&VERSION=1.1&FORMAT=image/png&BBOX="+str(xx-1)+","+str(yy-1)+","+str(xx+1)+","+str(yy+1)+"&HEIGHT=9&WIDTH=9&LAYERS=CP.CadastralParcel&QUERY_LAYERS=CP.CadastralParcel&INFO_FORMAT=text/html&X=5&Y=5"
 
