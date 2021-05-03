@@ -18,7 +18,7 @@
       - [Sitografia](#sitografia)
     - [Contatti Totò Fiandaca](#contatti-totò-fiandaca)
       - [Sitografia](#sitografia-1)
-- [Workshop](#workshop)
+- [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
     - [Espressione calcolatore di campi](#espressione-calcolatore-di-campi)
   - [Servizio WMS](#servizio-wms-1)
@@ -145,7 +145,7 @@
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
-# Workshop
+# Workshop WMS Catasto AdE in QGIS
 
 ## Decorazione Etichetta Titolo
 
@@ -337,7 +337,7 @@ with_variable('fp',
 2. espressioni personalizzate e non
 3. campi virtuali;
 4. Plugin;
-5. Etichette con con funzione custom.
+5. Etichette con funzione custom.
 6. Decorazioni: Copyright, Immagine, Etichetta Titolo.
 
 # Riferimenti utili
@@ -351,9 +351,6 @@ with_variable('fp',
 - **Visual Studio Code** : <https://code.visualstudio.com/>
 - **onData** : <https://ondata.it/>
 - **OpenDataSicilia** : <http://opendatasicilia.it/>
-
-![](./imgs/istat88x31.png)
-**NB:** Tutti i dati prodotti dall’Istituto nazionale di statistica (ISTAT) sono rilasciati sotto [licenza Creative Commons (CC BY 3.0 IT)](https://www.istat.it/it/note-legali): è possibile riprodurre, distribuire, trasmettere e adattare liberamente dati e analisi dell’Istituto nazionale di statistica, anche a scopi commerciali, a **condizione che venga citata la fonte**.
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
