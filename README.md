@@ -85,7 +85,7 @@
 
 ## QGIS e il WMS AdE
 
-![](./imgs/wms1.png)
+![](./imgs/WMS1.png)
 
 [↑ torna su ↑](#workshop-estate-gis-2020-unipd)
 
