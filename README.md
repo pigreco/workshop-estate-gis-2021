@@ -1,5 +1,9 @@
 # Workshop estate GIS 2021 UNIPD
 
+[![](https://img.shields.io/badge/discussioni-partecipa-brightgreen?style=for-the-badge&logo=github)](https://github.com/pigreco/workshop-estate-gis-2021/discussions)
+
+---
+
 **INDICE**
 
 <!-- TOC -->
@@ -343,6 +347,7 @@ with_variable('fp',
 # Riferimenti utili
 
 - **QGIS** : <https://qgis.org/it/site/>
+- **Repo QGIS** : <https://github.com/qgis/QGIS/blob/master/README.md>
 - **Plugin Gimp Selection Feature** : <https://plugins.qgis.org/plugins/gimpselectionfeature_plugin/>
 - **Plugin Magic Wand** : <https://plugins.qgis.org/plugins/MagicWand-master/>
 - **Consultazione cartografia catastale - WMS** : <https://www.agenziaentrate.gov.it/portale/web/guest/schede/fabbricatiterreni/consultazione-cartografia-catastale/servizio-consultazione-cartografia>
