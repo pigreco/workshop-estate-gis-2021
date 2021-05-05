@@ -59,7 +59,7 @@
 
 - 👨‍🦲 **Totò FIANDACA** <br>(Membro [OpenDataSicilia](http://opendatasicilia.it/) (2014) , Membro [QGIS Italia](http://qgis.it/) (2015), Socio [GFOSS.it](https://gfoss.it/) (2017), Membro [QGIS organization](https://github.com/qgis) (2020))
 
-<p align="center"><a href="" target="_blank"><img src="imgs/loghi.png" width="600" title="Totò FIANDACA"></a></p>
+<p align="center"><a href="" target="_blank"><img src="imgs/loghi.png" width="400" title="Totò FIANDACA"></a></p>
 
 ## Data, luogo e durata
 
