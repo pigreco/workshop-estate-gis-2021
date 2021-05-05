@@ -19,7 +19,6 @@
     - [link utili](#link-utili)
   - [Contatti](#contatti)
     - [Contatti Andrea Borruso](#contatti-andrea-borruso)
-      - [Sitografia](#sitografia)
     - [Contatti Totò Fiandaca](#contatti-totò-fiandaca)
       - [Sitografia](#sitografia-1)
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
