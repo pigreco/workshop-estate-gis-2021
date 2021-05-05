@@ -56,7 +56,7 @@
 
 - 🧔 [**Andrea BORRUSO**](https://twitter.com/aborruso) <br>(Membro [OpenDataSicilia](http://opendatasicilia.it/) (2014), Presidente [onData](https://ondata.it/) (2015))
 
-<p align="center"><a href="" target="_blank"><img src="imgs/loghi_aborruso.png" width="600" title="Totò FIANDACA"></a></p>
+<!--<p align="center"><a href="" target="_blank"><img src="imgs/loghi_aborruso.png" width="600" title="Totò FIANDACA"></a></p>-->
 
 - 👨‍🦲 **Totò FIANDACA** <br>(Membro [OpenDataSicilia](http://opendatasicilia.it/) (2014) , Membro [QGIS Italia](http://qgis.it/) (2015), Socio [GFOSS.it](https://gfoss.it/) (2017), Membro [QGIS organization](https://github.com/qgis) (2020))
 
