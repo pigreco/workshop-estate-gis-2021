@@ -18,9 +18,9 @@
     - [servizio WMS](#servizio-wms)
     - [link utili](#link-utili)
   - [Contatti](#contatti)
-    - [Contatti Andrea Borruso](#contatti-andrea-borruso)
-    - [Contatti Totò Fiandaca](#contatti-totò-fiandaca)
-      - [Sitografia](#sitografia-1)
+    - [Andrea Borruso](#andrea-borruso)
+    - [Totò Fiandaca](#totò-fiandaca)
+      - [Sitografia](#sitografia)
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
     - [Espressione calcolatore di campi](#espressione-calcolatore-di-campi)
@@ -39,9 +39,9 @@
 
 ---
 
-**TITOLO**: <br> Il WMS del catasto dell'Agenzia delle Entrate: licenza, come usarlo in [QGIS](https://qgis.org/it/site/):aggiungi WMS, estrazione dati e digitalizzazione particelle.
+**TITOLO**: <br> Il WMS del catasto dell'Agenzia delle Entrate: licenza, come usarlo in [QGIS](https://qgis.org/it/site/): come aggiungere il servizio WMS, come estrazione dati e digitalizzare le particelle.
 
-**DESCRIZIONE**: <br> Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando **opendata** e software **Open Source**. Realizzeremo un progetto **QGIS** utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come utilizzare il WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.
+**DESCRIZIONE**: <br> Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando **opendata** e software **Open Source**. Realizzeremo un progetto **QGIS** utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.
 
 <p align="center"><a href="https://www.mastergiscience.it/it_IT/2020/06/01/estate-gis-2020/" target="_blank"><img src="./imgs/..." width="500" title="EstateGIS"></a></p>
 
@@ -118,13 +118,13 @@
 
 ## Contatti
 
-### Contatti Andrea Borruso
+### Andrea Borruso
 
 * **Mail**: <andrea.borruso@ondata.it>
 * **Twitter**: <https://twitter.com/aborruso>
 
 
-### Contatti Totò Fiandaca
+### Totò Fiandaca
 
 * **Mail**: <pigrecoinfinito@gmail.com>
 * **Facebook**: <https://www.facebook.com/pigreco314>
