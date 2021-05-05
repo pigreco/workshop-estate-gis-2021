@@ -121,13 +121,8 @@
 
 ### Contatti Andrea Borruso
 
-* **Mail**: <@gmail.com>
-* **Facebook**: <https://www.facebook.com/.....>
-* **Twitter**: <https://twitter.com/.....>
-
-#### Sitografia
-
-* **blog**: <https://..../>
+* **Mail**: <andrea.borruso@ondata.it>
+* **Twitter**: <https://twitter.com/aborruso>
 
 
 ### Contatti Totò Fiandaca
