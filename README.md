@@ -54,7 +54,7 @@
 
 ## Relatori
 
-- 🧔 **Andrea BORRUSO** <br>(Membro [OpenDataSicilia](http://opendatasicilia.it/) (2014), Presidente [onData](https://ondata.it/) (2015),... )
+- 🧔 [**Andrea BORRUSO**](https://twitter.com/aborruso) <br>(Membro [OpenDataSicilia](http://opendatasicilia.it/) (2014), Presidente [onData](https://ondata.it/) (2015))
 
 <p align="center"><a href="" target="_blank"><img src="imgs/loghi_aborruso.png" width="600" title="Totò FIANDACA"></a></p>
 
