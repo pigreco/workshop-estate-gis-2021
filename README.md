@@ -30,7 +30,13 @@
   - [Espressione personalizzata](#espressione-personalizzata)
   - [campi virtuali](#campi-virtuali)
     - [EDIT](#edit)
-    - [Video demo:](#video-demo)
+  - [Digitalizzazione particelle](#digitalizzazione-particelle)
+    - [Plugin GIMP Selection Feature](#plugin-gimp-selection-feature)
+    - [Osservazioni](#osservazioni)
+    - [workflow](#workflow)
+    - [Plugin Magic Wand](#plugin-magic-wand)
+    - [workflow](#workflow-1)
+  - [Video demo:](#video-demo)
 - [Caratteristiche utilizzate nel progetto](#caratteristiche-utilizzate-nel-progetto)
 - [Riferimenti utili](#riferimenti-utili)
 - [Cosa c'è in questo repo](#cosa-cè-in-questo-repo)
@@ -310,7 +316,62 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
-### Video demo:
+## Digitalizzazione particelle
+
+### Plugin GIMP Selection Feature
+
+- **GIMP**: <https://www.gimp.org/>
+- **Plugin**: <https://plugins.qgis.org/plugins/gimpselectionfeature_plugin/> 
+
+![](./imgs/plugin_gimp.png)
+
+### Osservazioni
+
+![](https://pigrecoinfinito.files.wordpress.com/2020/10/image-3.png?w=1024)
+
+* <kbd>id_add</kbd>: l’indice della funzionalità aggiunta;
+* <kbd>total_imgs</kbd>: totale delle immagini inviate a GIMP;
+* <kbd>images</kbd>: l’elenco delle immagini (nome e origine);
+* <kbd>user</kbd>: il nome dell’utente della macchina;
+* <kbd>date_add</kbd>: la data dell’elemento aggiunto;
+* <kbd>crs_map</kbd>: CRS della mappa quando è stata inviata l’immagine;
+* <kbd>extent_map</kbd>: l’estensione della mappa quando l’immagine è stata inviata;
+* <kbd>annotation</kbd>: il testo digitato quando l’immagine è stata inviata;
+* <kbd>area_ha</kbd>: L’ettaro della geometria (è un campo virtuale) con la seguente espressione da verificare sempre e eventualmente correggere:
+* <kbd>area(transform($geometry,'EPSG:4326','EPSG:3045'))/10000</kbd>
+* Gimp utilizzato 2.10.24;
+* Il SR del livello “gimp_selection” è <kbd>EPSG: 4326</kbd>
+
+### workflow
+
+1. Avviare QGIS e installare il Plugin GIMP Selection Feature;
+2. Avviare GIMP e verificare che ci siam un menu **IBAMA**;
+3. Avviare il servizio dal menu IBAMA;
+4. in QGIS caricare il WMS catasto AdE e posizionarsi in un'area;
+5. Avviare il plugin da Menu Raster;
+6. Comparirà la finestra del plugin agganciata sul lato destro dello schermo;
+7. nel riquadro `Visible Images` ci sarà l'elenco dei layer raster caricati nella TOC e attivi;
+8. dopo aver centrota l'area da digitalizzare nella map canvas: pigiare il bottone `Send image`;
+9. dopo qualche secondo, l'immagine della map canvas apparirà in GIMP;
+10. usare lo _Strumento seleziona fuzzy_ e cliccare dentro una particella;
+11. da QGIS, pigiare sul bottone `Get feature` per acquisire area selezionata come poligono.
+
+Per maggiori info: <https://github.com/lmotta/gimpselectionfeature_plugin/wiki>
+
+### Plugin Magic Wand
+
+- <https://plugins.qgis.org/plugins/MagicWand-master/>
+
+![](./imgs/plugin_magic.png)
+
+### workflow
+
+1. Impostare _Precisione_ e _Soglia_ colore e fare clic sulla mapcanvas dove si desidera creare un poligono;
+2. La modalità singola ti consente di creare UN poligono intorno a dove hai cliccato.
+3. Una maggiore precisione richiede più tempo.
+4. Per rendere il poligono in modo appropriato, è meglio regolare alta la Saturazione.
+
+## Video demo:
 
 [![add_col_area_perimetro](https://img.youtube.com/vi/Fu-i0zfxndY/0.jpg)](https://youtu.be/Fu-i0zfxndY "Come usare la Funzione in QGIS")
 
