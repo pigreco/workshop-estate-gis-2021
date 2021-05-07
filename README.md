@@ -36,7 +36,7 @@ Per domande clicca su PARTECIPA: <br>
       - [Workflow](#workflow)
     - [Plugin Magic Wand](#plugin-magic-wand)
       - [Workflow](#workflow-1)
-  - [Video demo:](#video-demo)
+  - [Video demo](#video-demo)
 - [Caratteristiche utilizzate nel progetto](#caratteristiche-utilizzate-nel-progetto)
 - [Riferimenti utili](#riferimenti-utili)
 - [Cosa c'è in questo repo](#cosa-cè-in-questo-repo)
@@ -45,7 +45,7 @@ Per domande clicca su PARTECIPA: <br>
 
 ---
 
-**TITOLO**: <br> Il WMS del catasto dell'Agenzia delle Entrate: licenza, come usarlo in [QGIS](https://qgis.org/it/site/): come aggiungere il servizio WMS, come estrarre i dati e digitalizzare le particelle.
+**TITOLO**: <br> Il WMS del catasto dell'Agenzia delle Entrate: licenza, come usarlo in [QGIS](https://qgis.org/it/site/), come aggiungere il servizio WMS, come estrarre i dati e digitalizzare le particelle.
 
 **DESCRIZIONE**: <br> Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando **opendata** e software **Open Source**. Realizzeremo un progetto **QGIS** utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.
 
@@ -167,8 +167,8 @@ Ai soli fini di una migliore fruibilità del servizio in ambito INSPIRE, sono di
 
 map_crs     |   map_crs_description         | Area of fuse                   | Unit
 ------------|-------------------------------|--------------------------------|--------
-EPSG:6706   | RDN2008                       |  Italy - onshore and offshore  | degree 
-EPSG:4258   | ETRS89                        |  Europe - onshore and offshore | degree
+EPSG:6706   | RDN2008                       |  Italy - onshore and offshore  | `degree` 
+EPSG:4258   | ETRS89                        |  Europe - onshore and offshore | `degree`
 EPSG:3044   | ETRS89 / UTM zone 32N (N-E)   |  Europe between 06°E and 12°E  | metre
 EPSG:3045   | ETRS89 / UTM zone 33N (N-E)   |  Europe between 12°E and 18°E  | metre
 EPSG:3046   | ETRS89 / UTM zone 34N (N-E)   |  Europe between 18°E and 24°E  | metre
@@ -194,6 +194,8 @@ copyright | Copyright(c) |
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
 ## Espressione personalizzata
+
+Questa espressione personalizzata permette di estrarre i dati esposti dal WMS Catasto
 
 ```python
 # -*- coding: utf-8 -*-
@@ -233,15 +235,19 @@ def get_parcel_info2(xx, yy, EPSG, feature, parent):
 
 file da salvare nella cartella del profilo corrente: `C:\Users\nomeUtente\AppData\Roaming\QGIS\QGIS3\profiles\default\python\expressions`
 
-raggiungibile da : Menu | Impostazionio | Profilo utente | Apri la cartella del profilo attivo
+raggiungibile da : Menu | Impostazioni | Profilo utente | Apri la cartella del profilo attivo
 
 <p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="./imgs/profilo_utente.png" width="600" title="Impostazioni | Profilo"></a></p>
+
+la funzione personalizzata nel Gruppo Custom del field calc:
+
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="./imgs/field_calc.png" width="600" title="Gruppo Custom - Field Calc"></a></p>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
 ## campi virtuali
 
-sotto le espressioni utilizzate nei campi virtuali
+sotto le espressioni utilizzate nei campi virtuali (i campi virtuali permettono di creare un layer con i campi popolati da espressioni)
 
 Creare un vettore puntuale, per esempio in un GeoPackage e definire solo il campo `fid`, gli altri campi li definiamo come `campi virtuali`, ecco le definizioni:
 
@@ -359,7 +365,7 @@ Per maggiori info: <https://github.com/lmotta/gimpselectionfeature_plugin/wiki>
 3. Una maggiore precisione richiede più tempo.
 4. Per rendere il poligono in modo appropriato, è meglio regolare alta la Saturazione.
 
-## Video demo:
+## Video demo
 
 Video 1 | Video 2 | Video 3 | Video 4
 --------|---------|---------|--------
@@ -367,13 +373,13 @@ Video 1 | Video 2 | Video 3 | Video 4
 
 ```
 /*estrae il foglio e la particella catastale a partire da un poligono*/
-with_variable('fp',                                                              -- crea una variabile e la chiama fp
+with_variable('fp',                                                          -- crea una variabile e la chiama fp
 		with_variable('geom',                                                    -- crea una variabile e la chiama geom
-				transform($geometry,'EPSG:4326', @project_crs ),                 -- trasformazione di geometria
-				get_parcel_info(                                                 -- funzione personalizzata
-						x( point_on_surface( @geom)),                            -- coord. x del punto dentro il poligono
-						y( point_on_surface( @geom)))),                          -- coord. y del punto dentro il poligono
-	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')   -- estrae i dati tramite espressione regolare
+				transform($geometry,'EPSG:4326', @project_crs ),                     -- trasformazione di geometria
+				get_parcel_info(                                                     -- funzione personalizzata
+						x( point_on_surface( @geom)),                                    -- coord. x del punto dentro il poligono
+						y( point_on_surface( @geom)))),                                  -- coord. y del punto dentro il poligono
+	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6') -- estrae i dati tramite espressione regolare
 		    	)
 ```
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
