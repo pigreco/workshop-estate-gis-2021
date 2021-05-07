@@ -41,6 +41,7 @@ Per domande clicca su PARTECIPA: <br>
 - [Caratteristiche utilizzate nel progetto](#caratteristiche-utilizzate-nel-progetto)
 - [Riferimenti utili](#riferimenti-utili)
 - [Cosa c'è in questo repo](#cosa-cè-in-questo-repo)
+- [Licenza](#licenza)
 
 <!-- /TOC -->
 
@@ -266,13 +267,15 @@ sotto le espressioni utilizzate nei campi virtuali (i campi virtuali permettono 
 
 Creare un vettore puntuale, per esempio in un GeoPackage e definire solo il campo `fid`, gli altri campi li definiamo come `campi virtuali`, ecco le definizioni:
 
-- fid : - (unico campo creato automaticamente dal GeoPackage)
-- x : `$x`
-- y : `$y`
-- catasto :  `get_parcel_info( "x","y") `
-- codice : `regexp_replace("catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\4')`
-- foglio : `regexp_replace("catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5')`
-- particella : `regexp_replace("catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\6')`
+nome campo | tipo campo | espressione | descrizione
+-----------|------------|-------------|-----------
+fid | automatico | - | unico campo creato automaticamente dal GeoPackage
+x | virtuale | `$x` | |
+y |virtuale | `$y` | |
+catasto | virtuale | `get_parcel_info("x","y")`|
+codice | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\4')` |
+foglio | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\5')` |
+particella | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\6')` |
 
 ### in dettaglio
 
@@ -403,11 +406,12 @@ with_variable('fp',
 # Caratteristiche utilizzate nel progetto
 
 1. WMS, Geopackage;
-2. espressioni personalizzate e non
-3. campi virtuali;
-4. Plugin;
-5. Etichette con funzione custom.
-6. Decorazioni: Copyright, Immagine, Etichetta Titolo.
+2. espressioni personalizzate e non;
+3. espressioni regolari;
+4. campi virtuali;
+5. Plugin;
+6. Etichette con funzione custom.
+7. Decorazioni: Copyright, Immagine, Etichetta Titolo.
 
 # Riferimenti utili
 
@@ -432,4 +436,8 @@ with_variable('fp',
 - file `README.md` è questo file, con le info.
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
+
+# Licenza
+
+**CC BY 4.0** - <https://creativecommons.org/licenses/by/4.0/deed.it>
 

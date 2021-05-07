@@ -1,0 +1,3 @@
+# geopackage
+*.gpkg-shm
+*.gpkg-wal
