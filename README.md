@@ -1,5 +1,6 @@
 # Workshop estate GIS 2021 UNIPD
 
+Per domande clicca su PARTECIPA: <br>
 [![](https://img.shields.io/badge/discussioni-partecipa-brightgreen?style=for-the-badge&logo=github)](https://github.com/pigreco/workshop-estate-gis-2021/discussions)
 
 ---
@@ -20,7 +21,6 @@
   - [Contatti](#contatti)
     - [Andrea Borruso](#andrea-borruso)
     - [Totò Fiandaca](#totò-fiandaca)
-      - [Sitografia](#sitografia)
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
     - [Espressione calcolatore di campi](#espressione-calcolatore-di-campi)
@@ -32,10 +32,10 @@
     - [EDIT](#edit)
   - [Digitalizzazione particelle](#digitalizzazione-particelle)
     - [Plugin GIMP Selection Feature](#plugin-gimp-selection-feature)
-    - [Osservazioni](#osservazioni)
-    - [workflow](#workflow)
+      - [Osservazioni](#osservazioni)
+      - [workflow](#workflow)
     - [Plugin Magic Wand](#plugin-magic-wand)
-    - [workflow](#workflow-1)
+      - [workflow](#workflow-1)
   - [Video demo:](#video-demo)
 - [Caratteristiche utilizzate nel progetto](#caratteristiche-utilizzate-nel-progetto)
 - [Riferimenti utili](#riferimenti-utili)
@@ -45,7 +45,7 @@
 
 ---
 
-**TITOLO**: <br> Il WMS del catasto dell'Agenzia delle Entrate: licenza, come usarlo in [QGIS](https://qgis.org/it/site/): come aggiungere il servizio WMS, come estrazione dati e digitalizzare le particelle.
+**TITOLO**: <br> Il WMS del catasto dell'Agenzia delle Entrate: licenza, come usarlo in [QGIS](https://qgis.org/it/site/): come aggiungere il servizio WMS, come estrarre i dati e digitalizzare le particelle.
 
 **DESCRIZIONE**: <br> Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando **opendata** e software **Open Source**. Realizzeremo un progetto **QGIS** utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.
 
@@ -64,8 +64,6 @@
 <!--<p align="center"><a href="" target="_blank"><img src="imgs/loghi_aborruso.png" width="600" title="Totò FIANDACA"></a></p>-->
 
 - 👨‍🦲 **Totò FIANDACA** <br>(Membro [OpenDataSicilia](http://opendatasicilia.it/) (2014) , Membro [QGIS Italia](http://qgis.it/) (2015), Socio [GFOSS.it](https://gfoss.it/) (2017), Membro [QGIS organization](https://github.com/qgis) (2020))
-
-<p align="center"><a href="" target="_blank"><img src="imgs/loghi.png" width="400" title="Totò FIANDACA"></a></p>
 
 ## Data, luogo e durata
 
@@ -129,23 +127,11 @@
 * **Mail**: <andrea.borruso@ondata.it>
 * **Twitter**: <https://twitter.com/aborruso>
 
-
 ### Totò Fiandaca
 
 * **Mail**: <pigrecoinfinito@gmail.com>
 * **Facebook**: <https://www.facebook.com/pigreco314>
 * **Twitter**: <https://twitter.com/totofiandaca>
-
-#### Sitografia
-
-* **blog**: <https://pigrecoinfinito.com/>
-* **canale youtube**: <http://www.youtube.com/c/TotòFiandaca>
-* **HfcQGIS**: <http://hfcqgis.opendatasicilia.it/it/latest/index.html>
-* **Tansignari**: <http://tansignari.opendatasicilia.it/it/latest/#>
-* **data.world**: <https://data.world/pigrecoinfinito>
-* **github**: <https://github.com/pigreco>
-* **gitlab**: <https://gitlab.com/pigr3co>
-* **Canale Telegram** : <https://t.me/pigrecoinfinito>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
@@ -325,7 +311,7 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 
 ![](./imgs/plugin_gimp.png)
 
-### Osservazioni
+#### Osservazioni
 
 ![](https://pigrecoinfinito.files.wordpress.com/2020/10/image-3.png?w=1024)
 
@@ -342,7 +328,7 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 * Gimp utilizzato 2.10.24;
 * Il SR del livello “gimp_selection” è <kbd>EPSG: 4326</kbd>
 
-### workflow
+#### workflow
 
 1. Avviare QGIS e installare il Plugin GIMP Selection Feature;
 2. Avviare GIMP e verificare che ci siam un menu **IBAMA**;
@@ -364,7 +350,7 @@ Per maggiori info: <https://github.com/lmotta/gimpselectionfeature_plugin/wiki>
 
 ![](./imgs/plugin_magic.png)
 
-### workflow
+#### workflow
 
 1. Impostare _Precisione_ e _Soglia_ colore e fare clic sulla mapcanvas dove si desidera creare un poligono;
 2. La modalità singola ti consente di creare UN poligono intorno a dove hai cliccato.
