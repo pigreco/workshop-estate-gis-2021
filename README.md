@@ -30,7 +30,7 @@ Per domande clicca su PARTECIPA: <br>
     - [Layer disponibili nel WMS](#layer-disponibili-nel-wms)
   - [Espressione personalizzata](#espressione-personalizzata)
   - [campi virtuali](#campi-virtuali)
-    - [in dettaglio](#in-dettaglio)
+    - [casi possibili](#casi-possibili)
   - [Digitalizzazione particelle](#digitalizzazione-particelle)
     - [Plugin GIMP Selection Feature](#plugin-gimp-selection-feature)
       - [Osservazioni](#osservazioni)
@@ -180,6 +180,7 @@ Ai soli fini di una migliore fruibilità del servizio in ambito INSPIRE, sono di
 
 - Capabitilis : <https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>
 - copiate il link di sopra e incollatelo in un browser, poi cercate EPSG, troverete una lista di EPSG utilizzabili.
+- Codici Comuni : <https://www1.agenziaentrate.gov.it/servizi/codici/ricerca/VisualizzaTabella.php?ArcName=COM-ICI>
 
 map_crs     |   map_crs_description         | Area of fuse                   | Unit
 ------------|-------------------------------|--------------------------------|--------
@@ -269,18 +270,18 @@ Creare un vettore puntuale, per esempio in un GeoPackage e definire solo il camp
 
 nome campo | tipo campo | espressione | descrizione
 -----------|------------|-------------|-----------
-fid | automatico | - | unico campo creato automaticamente dal GeoPackage
-x | virtuale | `$x` | |
-y |virtuale | `$y` | |
-catasto | virtuale | `get_parcel_info("x","y")`|
-codice | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\4')` |
-foglio | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\5')` |
-particella | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\6')` |
+fid | automatico | - | generato dal GeoPackage
+x | virtuale | `$x` | coordinata x del punto
+y |virtuale | `$y` | coordinata y del punto
+catasto | virtuale | `get_parcel_info("x","y")`| funzione personalizzata
+codice | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\4')` | estrazione codice Belfiore
+foglio | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\5')` | nro foglio
+particella | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\6')` | nro particella
 
-### in dettaglio
+### casi possibili
 
-- `IT.AGE.PLA.G273_011800.485` caso senza sezione
-- `IT.AGE.PLA.B354A0018V0.2261` caso con sezione
+1. `IT.AGE.PLA.G273_011800.485` caso senza sezione
+2. `IT.AGE.PLA.B354A0018V0.2261` caso con sezione
 
 Alcuni comuni presentano delle sezioni e quindi la stringa estratta da `get_parcel_info()` puo' variare, per tenere conto di questi casi occorre utilizzare le seguenti espressioni:
 
