@@ -24,6 +24,7 @@ Per domande clicca su PARTECIPA: <br>
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
     - [Espressione utilizzata](#espressione-utilizzata)
+  - [Creare un nuovo GeoPackage](#creare-un-nuovo-geopackage)
   - [Servizio WMS](#servizio-wms-1)
     - [SR disponibili per il WMS](#sr-disponibili-per-il-wms)
     - [Layer disponibili nel WMS](#layer-disponibili-nel-wms)
@@ -67,15 +68,15 @@ Per domande clicca su PARTECIPA: <br>
 
 ## Data, luogo e durata
 
-- 🗓 09/06/2021 con orario  🕟 17.30 🕢 19.30 
+- 🗓 09/06/2021 con orario 🕟 17.30 🕢 19.30 
 - 🌐 on-line
-- ⏳ due ore
+- ⏳ 2️⃣ ore
 
 ## Piattaforme e Software
 
 - [ZOOM](https://zoom.us/) - per diretta web
 - Windows 10 64b - come SO
-- [`QGIS 3.16 Hannover`](https://qgis.org/it/site/) ![](./imgs/qgis-icon32.png) e Plugin [`Gimp Selection feature`](https://github.com/lmotta/gimpselectionfeature_plugin/wiki) e [`Magic Wand`](https://plugins.qgis.org/plugins/MagicWand-master/)
+- [`QGIS 3.16 Hannover`](https://qgis.org/it/site/) <img src = "./imgs/qgis-icon32.png" width =15> e Plugin <img src = "./imgs/plugin_gimp.png" width =15>[`Gimp Selection feature`](https://github.com/lmotta/gimpselectionfeature_plugin/wiki) e <img src = "./imgs/plugin_magic.png" width =15>[`Magic Wand`](https://plugins.qgis.org/plugins/MagicWand-master/)
 
 ## Programma - in lavorazione
 
@@ -153,6 +154,20 @@ WMS Catasto Agenzia delle Entrate - CC BY 4.0 - [% @map_crs ||': '|| @map_crs_de
 <p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="imgs/titolo.png" width="500" title="Decorazione Etichetta Titolo"></a></p>
 
 ![](imgs/dec_eti_titolo.png)
+
+## Creare un nuovo GeoPackage
+
+Per creare velocemente un nuovo **GeoPackage**, digitare `Ctrl+Shift+N`, altrimenti dal _Menu | Crea Vettore | Nuovo Layer GeoPackage_
+
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="./imgs/gpkg.png" width="400" title="Nuovo Layer GeoPackage"></a></p>
+
+1. definire il percorso e nome del GeoPackage;
+2. definire il nome della tabella (`catasto`);
+3. definire il Tipo di geometria (in questo esempio `Punto`);
+4. selezionare EPSG del Progetto (che deve essere EPSG del WMS Catasto);
+5. pigiare su `OK`
+
+NB: il GeoPackage creerà automaticamente il campo `fid`, tutti gli altri campi che ci serviranno saranno `campi virtuali` (vedi sotto)
 
 ## Servizio WMS
 
@@ -251,13 +266,13 @@ sotto le espressioni utilizzate nei campi virtuali (i campi virtuali permettono 
 
 Creare un vettore puntuale, per esempio in un GeoPackage e definire solo il campo `fid`, gli altri campi li definiamo come `campi virtuali`, ecco le definizioni:
 
-- fid : -
-- x : `x($geometry)`
-- y : `y($geometry)`
-- catasto :  `get_parcel_info(  "x" , "y"  ) `
-- codice : `regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\4')`
-- foglio : `regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5')`
-- particella : `regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\6')`
+- fid : - (unico campo creato automaticamente dal GeoPackage)
+- x : `$x`
+- y : `$y`
+- catasto :  `get_parcel_info( "x","y") `
+- codice : `regexp_replace("catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\4')`
+- foglio : `regexp_replace("catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5')`
+- particella : `regexp_replace("catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\6')`
 
 ### in dettaglio
 
@@ -373,13 +388,14 @@ Video 1 | Video 2 | Video 3 | Video 4
 
 ```
 /*estrae il foglio e la particella catastale a partire da un poligono*/
-with_variable('fp',                                                          -- crea una variabile e la chiama fp
-		with_variable('geom',                                                    -- crea una variabile e la chiama geom
-				transform($geometry,'EPSG:4326', @project_crs ),                     -- trasformazione di geometria
-				get_parcel_info(                                                     -- funzione personalizzata
-						x( point_on_surface( @geom)),                                    -- coord. x del punto dentro il poligono
-						y( point_on_surface( @geom)))),                                  -- coord. y del punto dentro il poligono
-	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6') -- estrae i dati tramite espressione regolare
+
+with_variable('fp',
+		with_variable('geom',
+				transform($geometry,'EPSG:4326', @project_crs ),
+				get_parcel_info(
+						x( point_on_surface( @geom)),
+						y( point_on_surface( @geom)))),
+	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')
 		    	)
 ```
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
