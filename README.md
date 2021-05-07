@@ -23,19 +23,19 @@ Per domande clicca su PARTECIPA: <br>
     - [Totò Fiandaca](#totò-fiandaca)
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
-    - [Espressione calcolatore di campi](#espressione-calcolatore-di-campi)
+    - [Espressione utilizzata](#espressione-utilizzata)
   - [Servizio WMS](#servizio-wms-1)
     - [SR disponibili per il WMS](#sr-disponibili-per-il-wms)
     - [Layer disponibili nel WMS](#layer-disponibili-nel-wms)
   - [Espressione personalizzata](#espressione-personalizzata)
   - [campi virtuali](#campi-virtuali)
-    - [EDIT](#edit)
+    - [in dettaglio](#in-dettaglio)
   - [Digitalizzazione particelle](#digitalizzazione-particelle)
     - [Plugin GIMP Selection Feature](#plugin-gimp-selection-feature)
       - [Osservazioni](#osservazioni)
-      - [workflow](#workflow)
+      - [Workflow](#workflow)
     - [Plugin Magic Wand](#plugin-magic-wand)
-      - [workflow](#workflow-1)
+      - [Workflow](#workflow-1)
   - [Video demo:](#video-demo)
 - [Caratteristiche utilizzate nel progetto](#caratteristiche-utilizzate-nel-progetto)
 - [Riferimenti utili](#riferimenti-utili)
@@ -101,7 +101,8 @@ Per domande clicca su PARTECIPA: <br>
 
 ## QGIS e il WMS AdE
 
-![](./imgs/WMS1.png)
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="./imgs/WMS1.png" width="700" title="QGIS e WMS Catasto AdE in CC BY 4.0"></a></p>
+
 
 [↑ torna su ↑](#workshop-estate-gis-2020-unipd)
 
@@ -124,14 +125,14 @@ Per domande clicca su PARTECIPA: <br>
 
 ### Andrea Borruso
 
-* **Mail**: <andrea.borruso@ondata.it>
+* ✉ **Mail**: <andrea.borruso@ondata.it>
 * **Twitter**: <https://twitter.com/aborruso>
 
 ### Totò Fiandaca
 
-* **Mail**: <pigrecoinfinito@gmail.com>
-* **Facebook**: <https://www.facebook.com/pigreco314>
+* ✉ **Mail**: <pigrecoinfinito@gmail.com>
 * **Twitter**: <https://twitter.com/totofiandaca>
+* **Canale Telegram**: <https://t.me/pigrecoinfinito>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
@@ -139,9 +140,9 @@ Per domande clicca su PARTECIPA: <br>
 
 ## Decorazione Etichetta Titolo
 
-Creare un nuovo progetto QGIS
+Creare un nuovo progetto QGIS e aggiungere Decorazione Titolo
 
-### Espressione calcolatore di campi
+### Espressione utilizzata
 
 espressione utilizzata: (Menu: Visualizza | Decorazioni | Etichetta Titolo ...)
 
@@ -149,9 +150,9 @@ espressione utilizzata: (Menu: Visualizza | Decorazioni | Etichetta Titolo ...)
 WMS Catasto Agenzia delle Entrate - CC BY 4.0 - [% @map_crs ||': '|| @map_crs_description %]
 ```
 
-![](imgs/titolo.png)
-![](imgs/dec_eti_titolo.png)
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="imgs/titolo.png" width="500" title="Decorazione Etichetta Titolo"></a></p>
 
+![](imgs/dec_eti_titolo.png)
 
 ## Servizio WMS
 
@@ -234,7 +235,7 @@ file da salvare nella cartella del profilo corrente: `C:\Users\nomeUtente\AppDat
 
 raggiungibile da : Menu | Impostazionio | Profilo utente | Apri la cartella del profilo attivo
 
-![](./imgs/profilo_utente.png)
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="./imgs/profilo_utente.png" width="600" title="Impostazioni | Profilo"></a></p>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
@@ -252,7 +253,7 @@ Creare un vettore puntuale, per esempio in un GeoPackage e definire solo il camp
 - foglio : `regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5')`
 - particella : `regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\6')`
 
-### EDIT
+### in dettaglio
 
 - `IT.AGE.PLA.G273_011800.485` caso senza sezione
 - `IT.AGE.PLA.B354A0018V0.2261` caso con sezione
@@ -298,7 +299,8 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\4'),11,1)
 /*campo particella variabile*/
 regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 ```
-![](https://i.imgur.com/KGi8uCK.png)
+
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="https://i.imgur.com/KGi8uCK.png" width="700" title="Tabella degli attributi"></a></p>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
@@ -309,11 +311,11 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 - **GIMP**: <https://www.gimp.org/>
 - **Plugin**: <https://plugins.qgis.org/plugins/gimpselectionfeature_plugin/> 
 
-![](./imgs/plugin_gimp.png)
+<img src = "./imgs/plugin_gimp.png" width =30>
 
 #### Osservazioni
 
-![](https://pigrecoinfinito.files.wordpress.com/2020/10/image-3.png?w=1024)
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="https://pigrecoinfinito.files.wordpress.com/2020/10/image-3.png?w=1024" width="700" title="Osservazioni sul Plugin GIMP"></a></p>
 
 * <kbd>id_add</kbd>: l’indice della funzionalità aggiunta;
 * <kbd>total_imgs</kbd>: totale delle immagini inviate a GIMP;
@@ -328,7 +330,7 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 * Gimp utilizzato 2.10.24;
 * Il SR del livello “gimp_selection” è <kbd>EPSG: 4326</kbd>
 
-#### workflow
+#### Workflow
 
 1. Avviare QGIS e installare il Plugin GIMP Selection Feature;
 2. Avviare GIMP e verificare che ci siam un menu **IBAMA**;
@@ -348,9 +350,9 @@ Per maggiori info: <https://github.com/lmotta/gimpselectionfeature_plugin/wiki>
 
 - <https://plugins.qgis.org/plugins/MagicWand-master/>
 
-![](./imgs/plugin_magic.png)
+<img src = "./imgs/plugin_magic.png" width =30>
 
-#### workflow
+#### Workflow
 
 1. Impostare _Precisione_ e _Soglia_ colore e fare clic sulla mapcanvas dove si desidera creare un poligono;
 2. La modalità singola ti consente di creare UN poligono intorno a dove hai cliccato.
@@ -359,20 +361,20 @@ Per maggiori info: <https://github.com/lmotta/gimpselectionfeature_plugin/wiki>
 
 ## Video demo:
 
-[![add_col_area_perimetro](https://img.youtube.com/vi/Fu-i0zfxndY/0.jpg)](https://youtu.be/Fu-i0zfxndY "Come usare la Funzione in QGIS")
-
-[![add_col_area_perimetro](https://img.youtube.com/vi/ujLGbsreqYY/0.jpg)](https://youtu.be/ujLGbsreqYY "Come usare la Funzione in QGIS")
+Video 1 | Video 2 | Video 3 | Video 4
+--------|---------|---------|--------
+[![add_col_area_perimetro](https://img.youtube.com/vi/Fu-i0zfxndY/0.jpg)](https://youtu.be/Fu-i0zfxndY "Estrarre i dati con il Field Calc di QGIS usando un Punto") | [![add_col_area_perimetro](https://img.youtube.com/vi/ujLGbsreqYY/0.jpg)](https://youtu.be/ujLGbsreqYY "Estrarre i dati catastali a partire da un Poligono") |[![add_col_area_perimetro](https://img.youtube.com/vi/GhJwzl8HDs8/0.jpg)](https://youtu.be/GhJwzl8HDs8 "Vettorializzare particelle con il Plugin GIMP Selection Feature") | [![add_col_area_perimetro](https://img.youtube.com/vi/DBRHYJOtqFo/0.jpg)](https://youtu.be/DBRHYJOtqFo "Vettotializzare Particelle con il Plugin Magic Wand")
 
 ```
 /*estrae il foglio e la particella catastale a partire da un poligono*/
-with_variable('fp',
-		with_variable('geom3045',
-				transform($geometry,'EPSG:4326', @project_crs ),
-				get_parcel_info( 
-						x( point_on_surface( @geom3045)),
-						y( point_on_surface( @geom3045)))),
-	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')
-			)
+with_variable('fp',                                                              -- crea una variabile e la chiama fp
+		with_variable('geom',                                                    -- crea una variabile e la chiama geom
+				transform($geometry,'EPSG:4326', @project_crs ),                 -- trasformazione di geometria
+				get_parcel_info(                                                 -- funzione personalizzata
+						x( point_on_surface( @geom)),                            -- coord. x del punto dentro il poligono
+						y( point_on_surface( @geom)))),                          -- coord. y del punto dentro il poligono
+	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')   -- estrae i dati tramite espressione regolare
+		    	)
 ```
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
