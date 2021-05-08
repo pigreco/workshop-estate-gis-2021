@@ -10,14 +10,13 @@ Per domande clicca su PARTECIPA: <br>
 <!-- TOC -->
 
 - [Workshop estate GIS 2021 UNIPD](#workshop-estate-gis-2021-unipd)
+  - [Titolo](#titolo)
   - [Relatori](#relatori)
   - [Data, luogo e durata](#data-luogo-e-durata)
   - [Piattaforme e Software](#piattaforme-e-software)
   - [Programma - in lavorazione](#programma---in-lavorazione)
   - [QGIS e il WMS AdE](#qgis-e-il-wms-ade)
-  - [Dati](#dati)
-    - [servizio WMS](#servizio-wms)
-    - [link utili](#link-utili)
+  - [link utili](#link-utili)
   - [Contatti](#contatti)
     - [Andrea Borruso](#andrea-borruso)
     - [Totò Fiandaca](#totò-fiandaca)
@@ -25,7 +24,7 @@ Per domande clicca su PARTECIPA: <br>
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
     - [Espressione utilizzata](#espressione-utilizzata)
   - [Creare un nuovo GeoPackage](#creare-un-nuovo-geopackage)
-  - [Servizio WMS](#servizio-wms-1)
+  - [Servizio WMS](#servizio-wms)
     - [SR disponibili per il WMS](#sr-disponibili-per-il-wms)
     - [Layer disponibili nel WMS](#layer-disponibili-nel-wms)
   - [Espressione personalizzata](#espressione-personalizzata)
@@ -38,6 +37,9 @@ Per domande clicca su PARTECIPA: <br>
     - [Plugin Magic Wand](#plugin-magic-wand)
       - [Workflow](#workflow-1)
   - [Video demo](#video-demo)
+- [Cosa occorre](#cosa-occorre)
+  - [Software da installare](#software-da-installare)
+  - [Plugin da installare](#plugin-da-installare)
 - [Caratteristiche utilizzate nel progetto](#caratteristiche-utilizzate-nel-progetto)
 - [Riferimenti utili](#riferimenti-utili)
 - [Cosa c'è in questo repo](#cosa-cè-in-questo-repo)
@@ -47,6 +49,8 @@ Per domande clicca su PARTECIPA: <br>
 
 ---
 
+## Titolo
+
 **TITOLO**: <br> Il WMS del catasto dell'Agenzia delle Entrate: licenza, come usarlo in [QGIS](https://qgis.org/it/site/), come aggiungere il servizio WMS, come estrarre i dati e digitalizzare le particelle.
 
 **DESCRIZIONE**: <br> Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando **opendata** e software **Open Source**. Realizzeremo un progetto **QGIS** utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.
@@ -54,7 +58,6 @@ Per domande clicca su PARTECIPA: <br>
 <p align="center"><a href="https://www.mastergiscience.it/it_IT/2020/06/01/estate-gis-2020/" target="_blank"><img src="./imgs/..." width="500" title="EstateGIS"></a></p>
 
 ---
-
 
 [![GitHub license](https://img.shields.io/badge/License-Creative%20Commons%20Attribution%204.0%20International-blue)](https://github.com/pigreco/seminario-estate-gis-2020/blob/master/license)
 [![GitHub commit](https://img.shields.io/github/last-commit/pcm-dpc/COVID-19)](https://github.com/pigreco/seminario-estate-gis-2020/commits/master)
@@ -78,24 +81,25 @@ Per domande clicca su PARTECIPA: <br>
 - [ZOOM](https://zoom.us/) - per diretta web
 - Windows 10 64b - come SO
 - [`QGIS 3.16 Hannover`](https://qgis.org/it/site/) <img src = "./imgs/qgis-icon32.png" width =15> e Plugin <img src = "./imgs/plugin_gimp.png" width =15>[`Gimp Selection feature`](https://github.com/lmotta/gimpselectionfeature_plugin/wiki) e <img src = "./imgs/plugin_magic.png" width =15>[`Magic Wand`](https://plugins.qgis.org/plugins/MagicWand-master/)
+- GIMP 2.10 <img src = "./imgs/gimp_logo.png" width =15>
 
 ## Programma - in lavorazione
 
 1. Presentazione iniziale da parte degli organizzatori;
-2. Andrea Borruso:
-   1.  introduce gli opendata;
-   2.  il WMS del Catasto Dell'AdE: la licenza prima e dopo del 24/09/2020;
+2. **Andrea Borruso:**
+   1.  introduzione agli opendata;
+   2.  il WMS del Catasto dell'AdE: la licenza prima e dopo del 24/09/2020;
    3.  cosa possiamo farci con il WMS: con QGIS o via script;
-3. Totò Fiandaca:
-   1. esempi di uso del WMS dell'AdE in QGIS:
-   2. come creare collegamento la WMS;
-   3. come usarle il WMS come layer;
-   4. quali layer sono presenti nel WMS e a quale scala sono visibili;
-   5. come interrogare il WMS;
+3. **Totò Fiandaca:**
+   1. come aggiungere il WMS del catasto AdE in QGIS;
+   2. come usarle il WMS come layer;
+   3. quali layer sono presenti nel WMS e a quale scala sono visibili;
+   4. quali SR sono disponibili nel WMS;
+   5. come fare una semplice interrogare del WMS in QGIS;
    6. quali dati espone il WMS;
    7. come estrarre i dati esposti dal WMS;
    8. come creare/usare espressioni personalizzate;
-   9. come digitalizzare le particelle in modo veloce;
+   9.  come digitalizzare le particelle in modo veloce;
    10. quali plugin usare per estrarre le particelle;
    11. 
 
@@ -108,16 +112,11 @@ Per domande clicca su PARTECIPA: <br>
 
 [↑ torna su ↑](#workshop-estate-gis-2020-unipd)
 
-## Dati
-
-### servizio WMS
+## link utili
 
 - **URL servizio WMS** : https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php
 - **PDF su WMS** : <https://www.agenziaentrate.gov.it/portale/documents/20143/260417/Manuale+consultazione+cartografia_Documentazione+descrittiva+del+servizio+di+consultazione+della+cartografia+catastale+20180611.pdf/35e955f7-2344-56c8-1157-8f7567531660>
 - **Capabilities** : <https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities>
-
-### link utili
-
 - **Pagina con URL e licenza** : https://www.agenziaentrate.gov.it/portale/web/guest/schede/fabbricatiterreni/consultazione-cartografia-catastale/servizio-consultazione-cartografia
 - **espressione personalizzata**: <https://gist.github.com/pigreco/86589dddf5a59b3a7650267d5af237bd>
 
@@ -404,6 +403,23 @@ with_variable('fp',
 ```
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
+# Cosa occorre
+
+Software con caratteristiche minime per seguire con profitto il workshop
+
+## Software da installare
+
+1. QGIS 3.16 Hannover (o maggiore) <img src = "./imgs/qgis-icon32.png" width =15>;
+2. GIMP 2.10 (attualmente GIMP 2.10.24) <img src = "./imgs/gimp_logo.png" width =15>;
+
+##  Plugin da installare
+
+1. GIMP Selection Feature <img src = "./imgs/plugin_gimp.png" width =15>;
+2. Magic Wand <img src = "./imgs/plugin_magic.png" width =15>;
+3. Nominatim Locator Filter <img src = "https://raw.githubusercontent.com/rduivenvoorde/nominatim_locator_filter/master/icons/icon.svg" width =15>
+
+[↑ torna su ↑](#workshop-estate-gis-2021-unipd)
+
 # Caratteristiche utilizzate nel progetto
 
 1. WMS, Geopackage;
@@ -411,8 +427,11 @@ with_variable('fp',
 3. espressioni regolari;
 4. campi virtuali;
 5. Plugin;
-6. Etichette con funzione custom.
-7. Decorazioni: Copyright, Immagine, Etichetta Titolo.
+6. GIMP;
+7. Etichette con funzione custom.
+8. Decorazioni: Copyright, Immagine, Etichetta Titolo.
+
+[↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
 # Riferimenti utili
 
@@ -421,6 +440,7 @@ with_variable('fp',
 - **Plugin Gimp Selection Feature** : <https://plugins.qgis.org/plugins/gimpselectionfeature_plugin/>
 - **Plugin Magic Wand** : <https://plugins.qgis.org/plugins/MagicWand-master/>
 - **Consultazione cartografia catastale - WMS** : <https://www.agenziaentrate.gov.it/portale/web/guest/schede/fabbricatiterreni/consultazione-cartografia-catastale/servizio-consultazione-cartografia>
+- **GIMP** : <https://www.gimp.org/>
 - **Font Trueno** : <https://www.wfonts.com/font/trueno>
 - **Visual Style Guide** : <https://www.qgis.org/en/site/getinvolved/styleguide.html#trueno-fonts>
 - **Visual Studio Code** : <https://code.visualstudio.com/>
