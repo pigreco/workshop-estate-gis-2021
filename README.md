@@ -36,13 +36,14 @@ Per domande clicca su PARTECIPA: <br>
       - [Workflow](#workflow)
     - [Plugin Magic Wand](#plugin-magic-wand)
       - [Workflow](#workflow-1)
-  - [Video demo](#video-demo)
+    - [estrarre dati dai poligoni](#estrarre-dati-dai-poligoni)
 - [Cosa occorre](#cosa-occorre)
   - [Software da installare](#software-da-installare)
   - [Plugin da installare](#plugin-da-installare)
 - [Caratteristiche utilizzate nel progetto](#caratteristiche-utilizzate-nel-progetto)
 - [Riferimenti utili](#riferimenti-utili)
 - [Cosa c'è in questo repo](#cosa-cè-in-questo-repo)
+- [Video demo](#video-demo)
 - [Licenza](#licenza)
 
 <!-- /TOC -->
@@ -324,6 +325,7 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\4'),11,1)
 regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 ```
 
+
 <p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="https://i.imgur.com/KGi8uCK.png" width="700" title="Tabella degli attributi"></a></p>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
@@ -383,11 +385,11 @@ Per maggiori info: <https://github.com/lmotta/gimpselectionfeature_plugin/wiki>
 3. Una maggiore precisione richiede più tempo.
 4. Per rendere il poligono in modo appropriato, è meglio regolare alta la Saturazione.
 
-## Video demo
+[↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
-Video 1 | Video 2 | Video 3 | Video 4
---------|---------|---------|--------
-[![add_col_area_perimetro](https://img.youtube.com/vi/Fu-i0zfxndY/0.jpg)](https://youtu.be/Fu-i0zfxndY "Estrarre i dati con il Field Calc di QGIS usando un Punto") | [![add_col_area_perimetro](https://img.youtube.com/vi/ujLGbsreqYY/0.jpg)](https://youtu.be/ujLGbsreqYY "Estrarre i dati catastali a partire da un Poligono") |[![add_col_area_perimetro](https://img.youtube.com/vi/GhJwzl8HDs8/0.jpg)](https://youtu.be/GhJwzl8HDs8 "Vettorializzare particelle con il Plugin GIMP Selection Feature") | [![add_col_area_perimetro](https://img.youtube.com/vi/DBRHYJOtqFo/0.jpg)](https://youtu.be/DBRHYJOtqFo "Vettotializzare Particelle con il Plugin Magic Wand")
+### estrarre dati dai poligoni
+
+nel caso di poligoni:
 
 ```
 /*estrae il foglio e la particella catastale a partire da un poligono*/
@@ -401,6 +403,7 @@ with_variable('fp',
 	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')
 		    	)
 ```
+
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
 # Cosa occorre
@@ -458,7 +461,15 @@ Software con caratteristiche minime per seguire con profitto il workshop
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
+# Video demo
+
+Video 1 | Video 2 | Video 3 | Video 4
+--------|---------|---------|--------
+[![add_col_area_perimetro](https://img.youtube.com/vi/Fu-i0zfxndY/0.jpg)](https://youtu.be/Fu-i0zfxndY "Estrarre i dati con il Field Calc di QGIS usando un Punto") | [![add_col_area_perimetro](https://img.youtube.com/vi/ujLGbsreqYY/0.jpg)](https://youtu.be/ujLGbsreqYY "Estrarre i dati catastali a partire da un Poligono") |[![add_col_area_perimetro](https://img.youtube.com/vi/GhJwzl8HDs8/0.jpg)](https://youtu.be/GhJwzl8HDs8 "Vettorializzare particelle con il Plugin GIMP Selection Feature") | [![add_col_area_perimetro](https://img.youtube.com/vi/DBRHYJOtqFo/0.jpg)](https://youtu.be/DBRHYJOtqFo "Vettotializzare Particelle con il Plugin Magic Wand")
+
 # Licenza
 
 **CC BY 4.0** - <https://creativecommons.org/licenses/by/4.0/deed.it>
+
+[↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
