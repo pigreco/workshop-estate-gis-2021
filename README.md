@@ -412,27 +412,28 @@ Software con caratteristiche minime per seguire con profitto il workshop
 
 ## Software da installare
 
-1. QGIS 3.16 Hannover (o maggiore) <img src = "./imgs/qgis-icon32.png" width =15>;
-2. GIMP 2.10 (attualmente GIMP 2.10.24) <img src = "./imgs/gimp_logo.png" width =15>;
+1. [QGIS 3.16 Hannover](https://qgis.org/it/site/) (o maggiore) <img src = "./imgs/qgis-icon32.png" width =15>;
+2. [GIMP 2.10](https://www.gimp.org/) (attualmente GIMP 2.10.24) <img src = "./imgs/gimp_logo.png" width =15>;
 
 ##  Plugin da installare
 
-1. GIMP Selection Feature <img src = "./imgs/plugin_gimp.png" width =15>;
-2. Magic Wand <img src = "./imgs/plugin_magic.png" width =15>;
-3. Nominatim Locator Filter <img src = "https://raw.githubusercontent.com/rduivenvoorde/nominatim_locator_filter/master/icons/icon.svg" width =15>
+1. [GIMP Selection Feature](https://plugins.qgis.org/plugins/gimpselectionfeature_plugin/) <img src = "./imgs/plugin_gimp.png" width =15>;
+2. [Magic Wand](https://plugins.qgis.org/plugins/MagicWand-master/) <img src = "./imgs/plugin_magic.png" width =15>;
+3. [Nominatim Locator Filter](https://plugins.qgis.org/plugins/nominatim_locator_filter/) <img src = "https://raw.githubusercontent.com/rduivenvoorde/nominatim_locator_filter/master/icons/icon.svg" width =15>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
 # Caratteristiche utilizzate nel progetto
 
-1. WMS, Geopackage;
-2. espressioni personalizzate e non;
-3. espressioni regolari;
-4. campi virtuali;
-5. Plugin;
-6. GIMP;
-7. Etichette con funzione custom.
-8. Decorazioni: Copyright, Immagine, Etichetta Titolo.
+1. servizio WMS;
+2. Geopackage;
+3. espressioni personalizzate e non;
+4. espressioni regolari;
+5. campi virtuali;
+6. Plugin;
+7. GIMP;
+8. Etichette con funzione custom.
+9. Decorazioni: Copyright, Immagine, Etichetta Titolo.
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
@@ -442,6 +443,7 @@ Software con caratteristiche minime per seguire con profitto il workshop
 - **Repo QGIS** : <https://github.com/qgis/QGIS/blob/master/README.md>
 - **Plugin Gimp Selection Feature** : <https://plugins.qgis.org/plugins/gimpselectionfeature_plugin/>
 - **Plugin Magic Wand** : <https://plugins.qgis.org/plugins/MagicWand-master/>
+- **Nominatim Locator Filter** : <https://plugins.qgis.org/plugins/nominatim_locator_filter/>
 - **Consultazione cartografia catastale - WMS** : <https://www.agenziaentrate.gov.it/portale/web/guest/schede/fabbricatiterreni/consultazione-cartografia-catastale/servizio-consultazione-cartografia>
 - **GIMP** : <https://www.gimp.org/>
 - **Font Trueno** : <https://www.wfonts.com/font/trueno>
