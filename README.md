@@ -56,7 +56,7 @@ Per domande clicca su PARTECIPA: <br>
 
 **DESCRIZIONE**: <br> Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando **opendata** e software **Open Source**. Realizzeremo un progetto **QGIS** utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.
 
-<p align="center"><a href="https://www.mastergiscience.it/it_IT/2020/06/01/estate-gis-2020/" target="_blank"><img src="./imgs/..." width="500" title="EstateGIS"></a></p>
+<p align="center"><a href="https://www.mastergiscience.it/2021/05/09/estate-gis-2021/" target="_blank"><img src="./imgs/EstateGISopendata_website.png" width="700" title="EstateGIS"></a></p>
 
 ---
 
@@ -73,7 +73,7 @@ Per domande clicca su PARTECIPA: <br>
 
 ## Data, luogo e durata
 
-- 🗓 09/06/2021 con orario 🕟 17.30 🕢 19.30 
+- 🗓 09/06/2021 con orario 🕟 17:30 🕢 19:30 
 - 🌐 on-line
 - ⏳ 2️⃣ ore
 
