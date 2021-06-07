@@ -14,7 +14,7 @@ Per domande clicca su PARTECIPA: <br>
   - [Relatori](#relatori)
   - [Data, luogo e durata](#data-luogo-e-durata)
   - [Piattaforme e Software](#piattaforme-e-software)
-  - [Programma - in lavorazione](#programma---in-lavorazione)
+  - [Programma](#programma)
   - [QGIS e il WMS AdE](#qgis-e-il-wms-ade)
   - [link utili](#link-utili)
   - [Contatti](#contatti)
@@ -87,7 +87,7 @@ Per domande clicca su PARTECIPA: <br>
 - [`QGIS 3.16 Hannover`](https://qgis.org/it/site/) <img src = "./imgs/qgis-icon32.png" width =15> e Plugin <img src = "./imgs/plugin_gimp.png" width =15>[`Gimp Selection feature`](https://github.com/lmotta/gimpselectionfeature_plugin/wiki) e <img src = "./imgs/plugin_magic.png" width =15>[`Magic Wand`](https://plugins.qgis.org/plugins/MagicWand-master/)
 - GIMP 2.10 <img src = "./imgs/gimp_logo.png" width =15>
 
-## Programma - in lavorazione
+## Programma
 
 1. Presentazione iniziale da parte degli organizzatori;
 2. **Andrea Borruso:**
@@ -495,6 +495,9 @@ Software con caratteristiche minime per seguire con profitto il workshop
 
 - cartella `imgs` contiene le immagini utilizzate nel progetto .qgs;
 - cartella `risorse` contiene i file utilizzati nel progetto, come:
+  - geopackage [particelle_WMS.gpkg](https://github.com/pigreco/workshop-estate-gis-2021/raw/main/risorse/particelle_WMS.gpkg);
+  - il geopackage contiene due tabelle: la prima si chiama `catasto` la seconda `particelle`;
+  - il geopackage contine anche il progetto (`catasto_wms`) che fa uso della tabella `catasto`; la tabella `particella` è vuota, pronta all'uso;
 - file `license` è il file che definisce la licenza del repository;
 - file `README.md` è questo file, con le info.
 
