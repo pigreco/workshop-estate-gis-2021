@@ -25,6 +25,7 @@ Per domande clicca su PARTECIPA: <br>
     - [Espressione utilizzata](#espressione-utilizzata)
   - [Creare un nuovo GeoPackage](#creare-un-nuovo-geopackage)
   - [Servizio WMS](#servizio-wms)
+    - [Quali dati espone il servizio WMS](#quali-dati-espone-il-servizio-wms)
     - [SR disponibili per il WMS](#sr-disponibili-per-il-wms)
     - [Layer disponibili nel WMS](#layer-disponibili-nel-wms)
   - [Espressione personalizzata](#espressione-personalizzata)
@@ -171,6 +172,17 @@ Per creare velocemente un nuovo **GeoPackage**, digitare `Ctrl+Shift+N`, altrime
 NB: il GeoPackage creerà automaticamente il campo `fid`, tutti gli altri campi che ci serviranno saranno `campi virtuali` (vedi sotto)
 
 ## Servizio WMS
+
+<https://geoportale.cartografia.agenziaentrate.gov.it/age-inspire/srv/ita/catalog.search;jsessionid=2D812F23AA0C878D6F2DE54F9CE259CB.node1#/home>
+
+### Quali dati espone il servizio WMS
+
+1. codie Belfiore;
+2. foglio;
+3. particella;
+4. sezione;
+5. allegato;
+6. sviluppo
 
 ### SR disponibili per il WMS
 
