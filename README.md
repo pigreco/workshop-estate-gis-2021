@@ -23,11 +23,13 @@ Per domande clicca su PARTECIPA: <br>
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
     - [Espressione utilizzata](#espressione-utilizzata)
-  - [Creare un nuovo GeoPackage](#creare-un-nuovo-geopackage)
   - [Servizio WMS](#servizio-wms)
+    - [Come aggiungere il Servizio WMS a QGIS](#come-aggiungere-il-servizio-wms-a-qgis)
     - [Quali dati espone il servizio WMS](#quali-dati-espone-il-servizio-wms)
     - [SR disponibili per il WMS](#sr-disponibili-per-il-wms)
     - [Layer disponibili nel WMS](#layer-disponibili-nel-wms)
+  - [Creare un nuovo GeoPackage](#creare-un-nuovo-geopackage)
+  - [Impostazioni Progetto](#impostazioni-progetto)
   - [Espressione personalizzata](#espressione-personalizzata)
   - [campi virtuali](#campi-virtuali)
     - [casi possibili](#casi-possibili)
@@ -103,7 +105,7 @@ Per domande clicca su PARTECIPA: <br>
    8. come creare/usare espressioni personalizzate;
    9.  come digitalizzare le particelle in modo veloce;
    10. quali plugin usare per estrarre le particelle;
-   11. 
+
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
@@ -157,21 +159,14 @@ WMS Catasto Agenzia delle Entrate - CC BY 4.0 - [% @map_crs ||': '|| @map_crs_de
 
 ![](imgs/dec_eti_titolo.png)
 
-## Creare un nuovo GeoPackage
-
-Per creare velocemente un nuovo **GeoPackage**, digitare `Ctrl+Shift+N`, altrimenti dal _Menu | Crea Vettore | Nuovo Layer GeoPackage_
-
-<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="./imgs/gpkg.png" width="400" title="Nuovo Layer GeoPackage"></a></p>
-
-1. definire il percorso e nome del GeoPackage;
-2. definire il nome della tabella (`catasto`);
-3. definire il Tipo di geometria (in questo esempio `Punto`);
-4. selezionare EPSG del Progetto (che deve essere EPSG del WMS Catasto);
-5. pigiare su `OK`
-
-NB: il GeoPackage creerà automaticamente il campo `fid`, tutti gli altri campi che ci serviranno saranno `campi virtuali` (vedi sotto)
-
 ## Servizio WMS
+
+### Come aggiungere il Servizio WMS a QGIS
+
+1. URL: `https://wms.cartografia.agenziaentrate.gov.it/inspire/wms/ows01.php`
+2. Gestione delle Sorgentidati | WMS/WMTS | Nuovo :
+
+![](imgs/wms_01.png)
 
 <https://geoportale.cartografia.agenziaentrate.gov.it/age-inspire/srv/ita/catalog.search;jsessionid=2D812F23AA0C878D6F2DE54F9CE259CB.node1#/home>
 
@@ -219,6 +214,36 @@ CP.CadastralParcel | Particelle | 1:5.000 | Campi previsti dalla Direttiva INSPI
 fabbricati | Fabbricati | 1:5.000 | n.d.
 vestizione | Vestizione | 1:2.000 | n.d.
 copyright | Copyright(c) |
+
+[↑ torna su ↑](#workshop-estate-gis-2021-unipd)
+
+## Creare un nuovo GeoPackage
+
+- Per chi volesse avere tutto pronto, scarica geopackage con progetto (posizionato in Sicilia)
+
+Per creare velocemente un nuovo **GeoPackage**, digitare `Ctrl+Shift+N`, altrimenti dal _Menu | Crea Vettore | Nuovo Layer GeoPackage_
+
+<p align="center"><a href="https://qgis.org/it/site/" target="_blank"><img src="./imgs/gpkg.png" width="400" title="Nuovo Layer GeoPackage"></a></p>
+
+1. definire il percorso e nome del GeoPackage;
+2. definire il nome della tabella (`catasto`);
+3. definire il Tipo di geometria (in questo esempio `Punto`);
+4. selezionare EPSG del Progetto (che deve essere EPSG del WMS Catasto);
+5. pigiare su `OK`
+
+NB: il GeoPackage creerà automaticamente il campo `fid`, tutti gli altri campi che ci serviranno saranno `campi virtuali` (vedi sotto)
+
+## Impostazioni Progetto
+
+1. definire l'area in cui lavorare (es: un comune);
+2. in funzione dell'area, definire EPSG del WMS (proiettato e non geografico);
+3. installare la funzione personalizzata;
+4. caricare il geopackage appena creato;
+5. aggiungere il layer WMS Catasto (vedi punto 2) e selezionare i layer:
+   1. Particelle;
+   2. vestizione;
+   3. copyright
+6. occhio alla scala di visualizzazione del layer;
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
