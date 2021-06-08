@@ -434,9 +434,9 @@ nel caso di poligoni:
 with_variable('fp',
 		with_variable('geom',
 				transform($geometry,'EPSG:4326', @project_crs ),
-				get_parcel_info(
+				get_parcel_info2(
 						x( point_on_surface( @geom)),
-						y( point_on_surface( @geom)))),
+						y( point_on_surface( @geom)), @project_crs)),
 	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')
 		    	)
 ```
