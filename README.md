@@ -172,7 +172,7 @@ WMS Catasto Agenzia delle Entrate - CC BY 4.0 - [% @map_crs ||': '|| @map_crs_de
 
 ### Quali dati espone il servizio WMS
 
-1. codie Belfiore;
+1. codice Belfiore;
 2. foglio;
 3. particella;
 4. sezione;
