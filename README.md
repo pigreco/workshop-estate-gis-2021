@@ -488,6 +488,7 @@ Software con caratteristiche minime per seguire con profitto il workshop
 - **Visual Studio Code** : <https://code.visualstudio.com/>
 - **onData** : <https://ondata.it/>
 - **OpenDataSicilia** : <http://opendatasicilia.it/>
+- **Blog Post di Andrea Borruso** : <https://medium.com/tantotanto/le-mappa-castali-diventano-finalmente-utilizzabili-821db2f84533>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
