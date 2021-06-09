@@ -320,7 +320,7 @@ particella | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.
 1. `IT.AGE.PLA.G273_011800.485` caso senza sezione
 2. `IT.AGE.PLA.B354A0018V0.2261` caso con sezione
 
-Alcuni comuni presentano delle sezioni e quindi la stringa estratta da `get_parcel_info()` puo' variare, per tenere conto di questi casi occorre utilizzare le seguenti espressioni:
+Alcuni comuni presentano delle sezioni e quindi la stringa estratta da `get_parcel_info2()` puo' variare, per tenere conto di questi casi occorre utilizzare le seguenti espressioni:
 
 - codice : 
 ```
@@ -399,10 +399,10 @@ regexp_replace(  "catasto" ,'^(.+)\\.(.+)\\.(.+)\\.(.+)\\.(.+)$', '\\5')
 2. Avviare GIMP e verificare che ci siam un menu **IBAMA**;
 3. Avviare il servizio dal menu IBAMA;
 4. in QGIS caricare il WMS catasto AdE e posizionarsi in un'area;
-5. Avviare il plugin da Menu Raster;
+5. Avviare il plugin da **Menu Raster**;
 6. Comparirà la finestra del plugin agganciata sul lato destro dello schermo;
 7. nel riquadro `Visible Images` ci sarà l'elenco dei layer raster caricati nella TOC e attivi;
-8. dopo aver centrota l'area da digitalizzare nella map canvas: pigiare il bottone `Send image`;
+8. dopo aver centrato l'area da digitalizzare nella map canvas: pigiare il bottone `Send image`;
 9. dopo qualche secondo, l'immagine della map canvas apparirà in GIMP;
 10. usare lo _Strumento seleziona fuzzy_ e cliccare dentro una particella;
 11. da QGIS, pigiare sul bottone `Get feature` per acquisire area selezionata come poligono.
@@ -422,14 +422,17 @@ Per maggiori info: <https://github.com/lmotta/gimpselectionfeature_plugin/wiki>
 3. Una maggiore precisione richiede più tempo.
 4. Per rendere il poligono in modo appropriato, è meglio regolare alta la Saturazione.
 
+NB: il poligono che restituisce ha lo stesso EPSG del Progetto.
+
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
 ### estrarre dati dai poligoni
 
-nel caso di poligoni:
+nel caso di poligoni (che hanno un EPSG diversoda quello del WMS):
 
 ```
 /*estrae il foglio e la particella catastale a partire da un poligono*/
+/*con EPSG diverso da quello del WMS*/
 
 with_variable('fp',
 		with_variable('geom',
@@ -439,6 +442,18 @@ with_variable('fp',
 						y( point_on_surface( @geom)), @project_crs)),
 	regexp_replace( @fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')
 		    	)
+```
+
+```
+/*estrae il foglio e la particella catastale a partire da un poligono*/
+/*con EPSG uguale a quello del WMS*/
+
+with_variable('fp',
+get_parcel_info2(
+x( point_on_surface($geometry)),
+y( point_on_surface($geometry)),@project_crs),
+regexp_replace(@fp ,'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$', '\\5/\\6')
+			)
 ```
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
