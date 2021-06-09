@@ -155,8 +155,6 @@ Per domande clicca su PARTECIPA: <br>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
----
-
 ## Domande finali
 
 1. **R. Brascugli chiede:** Il codice Py funziona anche se il layer particelle non è visibile?
