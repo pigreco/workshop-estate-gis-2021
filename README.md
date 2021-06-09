@@ -17,9 +17,11 @@ Per domande clicca su PARTECIPA: <br>
   - [Programma](#programma)
   - [QGIS e il WMS AdE](#qgis-e-il-wms-ade)
   - [link utili](#link-utili)
+  - [Risultati evento](#risultati-evento)
   - [Contatti](#contatti)
     - [Andrea Borruso](#andrea-borruso)
     - [Totò Fiandaca](#totò-fiandaca)
+  - [Domande finali](#domande-finali)
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
     - [Espressione utilizzata](#espressione-utilizzata)
@@ -126,6 +128,18 @@ Per domande clicca su PARTECIPA: <br>
 
 ---
 
+## Risultati evento
+
+- **430** iscritti
+- **246** max partecipanti (ZOOM + Facebook)
+- diretta Facebook : <https://fb.watch/60JOKALWuj/>
+
+![](./imgs/screenshot/photo_2021-06-09_19-42-36.jpg)
+
+![](./imgs/screenshot/Image5.png)
+
+---
+
 ## Contatti
 
 ### Andrea Borruso
@@ -140,6 +154,23 @@ Per domande clicca su PARTECIPA: <br>
 * **Canale Telegram**: <https://t.me/pigrecoinfinito>
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
+
+---
+
+## Domande finali
+
+1. **R. Brascugli chiede:** Il codice Py funziona anche se il layer particelle non è visibile?
+2. **Ing. Mario Perrotta:** I campi del vettore ottenuto da GIMP come sono definiti?
+3. **Alberto Gallo chiede:** É possibile ripetere il passaggio per creare il campo catasto (get_info_2)?
+4. **Maria Rosa Tremiterra chiede:** Questi metodi di vettorializzazione possono comportare errori topolgici?
+5. **Salvatore Falanga Bolognesi chiede:** Come mai a partire da dati catastali grezzi (CXF) non riesco ad ottenere la stessa precisione nella georeferenziazione? I tool da me utilizzati sono quelli standard di QGIS (CXF import) e successivamente il software ConveRGo (senza l’utilizzo di grigliati). Il problema sono i tool e/o i dati ancillari?
+6. **Antonio Martire chiede:** È possibile da QGIS (ed eventuale plugin) esportare la rappresentazione grafica del WMS Catasto, in vettoriale disegno, con estensione dxf o dwg?
+7. **Giacomo Molisso chiede:** Esiste un modo per interrogare il WMS del catasto al fine di individuare una particella di cui non si conosce la posizione esatta? Come ad esempio avviene con l’applicativo di strimatrix formaps?
+8. **Stefano Nardone chiede:** Dopo l’installazione del plugin GIMP Selection Feature, in GIMP non compare il menú IBAMA come poter risolvere.
+9. **Alessandro D’Andrea chiede:** C’è un modo per ringrandire la visualizzazione del layer vestizioni?
+10. **Federico Micucci chiede:** Facendo clic su “Send Image” da errore “impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione” Cosa significa?
+
+---
 
 # Workshop WMS Catasto AdE in QGIS
 
