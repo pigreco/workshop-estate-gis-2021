@@ -17,10 +17,10 @@ Per domande clicca su PARTECIPA: <br>
   - [Programma](#programma)
   - [QGIS e il WMS AdE](#qgis-e-il-wms-ade)
   - [link utili](#link-utili)
-  - [Risultati evento](#risultati-evento)
   - [Contatti](#contatti)
     - [Andrea Borruso](#andrea-borruso)
     - [Totò Fiandaca](#totò-fiandaca)
+  - [Risultati evento](#risultati-evento)
   - [Domande finali](#domande-finali)
 - [Workshop WMS Catasto AdE in QGIS](#workshop-wms-catasto-ade-in-qgis)
   - [Decorazione Etichetta Titolo](#decorazione-etichetta-titolo)
@@ -128,18 +128,6 @@ Per domande clicca su PARTECIPA: <br>
 
 ---
 
-## Risultati evento
-
-- **430** iscritti
-- **246** max partecipanti (ZOOM + Facebook)
-- diretta Facebook : <https://fb.watch/60JOKALWuj/>
-
-![](./imgs/screenshot/photo_2021-06-09_19-42-36.jpg)
-
-![](./imgs/screenshot/Image5.png)
-
----
-
 ## Contatti
 
 ### Andrea Borruso
@@ -152,6 +140,18 @@ Per domande clicca su PARTECIPA: <br>
 * ✉ **Mail**: <pigrecoinfinito@gmail.com>
 * **Twitter**: <https://twitter.com/totofiandaca>
 * **Canale Telegram**: <https://t.me/pigrecoinfinito>
+
+---
+
+## Risultati evento
+
+- **430** iscritti
+- **246** max partecipanti (ZOOM + Facebook)
+- diretta Facebook : <https://fb.watch/60JOKALWuj/>
+
+![](./imgs/screenshot/photo_2021-06-09_19-42-36.jpg)
+
+![](./imgs/screenshot/Image5.png)
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
@@ -169,6 +169,9 @@ Per domande clicca su PARTECIPA: <br>
 8. **Stefano Nardone chiede:** Dopo l’installazione del plugin GIMP Selection Feature, in GIMP non compare il menú IBAMA come poter risolvere.
 9. **Alessandro D’Andrea chiede:** C’è un modo per ringrandire la visualizzazione del layer vestizioni?
 10. **Federico Micucci chiede:** Facendo clic su “Send Image” da errore “impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione” Cosa significa?
+
+[↑ torna su ↑](#workshop-estate-gis-2021-unipd)
+
 
 ---
 
