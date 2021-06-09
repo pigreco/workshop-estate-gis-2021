@@ -310,7 +310,7 @@ nome campo | tipo campo | espressione | descrizione
 fid | automatico | - | generato dal GeoPackage
 x | virtuale | `$x` | coordinata x del punto
 y |virtuale | `$y` | coordinata y del punto
-catasto | virtuale | `get_parcel_info("x","y")`| funzione personalizzata
+catasto | virtuale | `get_parcel_info2("x","y")`| funzione personalizzata
 codice | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\4')` | estrazione codice Belfiore
 foglio | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\5')` | nro foglio
 particella | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.+)\\.(.+)$','\\6')` | nro particella
