@@ -50,6 +50,7 @@ Per domande clicca su PARTECIPA: <br>
 - [Cosa c'è in questo repo](#cosa-cè-in-questo-repo)
 - [Video demo](#video-demo)
 - [Licenza](#licenza)
+  - [Prossimi eventi](#prossimi-eventi)
 
 <!-- /TOC -->
 
@@ -574,3 +575,6 @@ Video 1 | Video 2 | Video 3 | Video 4
 
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
+## Prossimi eventi
+
+![](imgs/locandine/programma.png)
