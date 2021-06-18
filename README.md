@@ -155,6 +155,10 @@ Per domande clicca su PARTECIPA: <br>
 
 ![](./imgs/screenshot/Image5.png)
 
+![](./imgs/screenshot/photo_2021-06-11_12-03-56.jpg)
+
+![](.imgs/../imgs/screenshot/photo_2021-06-11_12-04-26.jpg)
+
 [↑ torna su ↑](#workshop-estate-gis-2021-unipd)
 
 ## Domande finali
