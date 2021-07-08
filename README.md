@@ -142,6 +142,7 @@ Per domande clicca su PARTECIPA: <br>
 * ✉ **Mail**: <pigrecoinfinito@gmail.com>
 * **Twitter**: <https://twitter.com/totofiandaca>
 * **Canale Telegram**: <https://t.me/pigrecoinfinito>
+* **Youtube** : <https://youtu.be/am9_zMbGofY>
 
 ---
 
@@ -180,7 +181,7 @@ Per domande clicca su PARTECIPA: <br>
 8. **Stefano Nardone chiede:** Dopo l’installazione del plugin GIMP Selection Feature, in GIMP non compare il menú IBAMA come poter risolvere.
    1. Occorrono altre info per poter rispondere adeguatgamente.
 9.  **Alessandro D’Andrea chiede:** C’è un modo per ringrandire la visualizzazione del layer vestizioni?
-    1. No, dipende da chi ha realizzato il WMS.
+    1. No, dipende da chi ha realizzato il WMS. (Puoi solo intervenire sui `dpi` di stampa, cioè diminuirli e non usare 300 ma 90 per esempio)
 10. **Federico Micucci chiede:** Facendo clic su “Send Image” da errore “impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione” Cosa significa?
     1.  Occorrono altre info per poter rispondere.
 
