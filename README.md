@@ -142,7 +142,6 @@ Per domande clicca su PARTECIPA: <br>
 * ✉ **Mail**: <pigrecoinfinito@gmail.com>
 * **Twitter**: <https://twitter.com/totofiandaca>
 * **Canale Telegram**: <https://t.me/pigrecoinfinito>
-* **Youtube** : <https://youtu.be/am9_zMbGofY>
 
 ---
 
@@ -151,6 +150,7 @@ Per domande clicca su PARTECIPA: <br>
 - **430** iscritti
 - **246** max partecipanti (ZOOM + Facebook)
 - diretta Facebook : <https://fb.watch/60JOKALWuj/>
+- **Youtube** : <https://youtu.be/am9_zMbGofY>
 
 ![](./imgs/screenshot/photo_2021-06-09_19-42-36.jpg)
 
