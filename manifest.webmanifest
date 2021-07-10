@@ -1,0 +1,10 @@
+{
+    "name": "Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali.",
+    "short_name": "Workshop estate GIS 2021 UNIPD",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando opendata e software Open Source. Realizzeremo un progetto QGIS utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.",
+    "lang": "it-IT",
+    "theme_color": "deep orange"
+}

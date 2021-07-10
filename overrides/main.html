@@ -1,0 +1,76 @@
+<!-- Elements added to main will be displayed on all pages -->
+{% extends "base.html" %}
+
+{% block libs %}
+ <!-- Qui Script header) --> 
+ <link href="../stylesheets/jquery-eu-cookie-law-popup.css" rel="stylesheet" type="text/css"/>
+ <!-- Qui Script footer) --> 
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b4bb82cddf7f677"></script>  
+ <!-- Qui Progress bar) --> 
+<script src="../stylesheets/jquery-3.1.1.min.js"></script>
+<script src="../stylesheets/prognroll.min.js"></script>
+<script>
+    $(function() {
+      $("body").prognroll({
+        height: 4, //Progress bar height in pixels
+        color: "#589632", //Progress bar background color
+      });
+    });
+</script> 
+<!-- eu-cookie-lawt -->
+<div class="eupopup eupopup-top "></div>
+<script src="../stylesheets/jquery-eu-cookie-law-popup.js"></script> 
+{% endblock %}
+
+<!-- blocco meta tag e social -->
+{% block extrahead %}
+  {% set title = config.site_name %}
+  {% if page and page.meta and page.meta.title %}
+    {% set title = title ~ " - " ~ page.meta.title %}
+  {% elif page and page.title and not page.is_homepage %}
+    {% set title = title ~ " - " ~ page.title | striptags %}
+  {% endif %}
+ <!-- facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ config.site_description }}" />
+  <meta property="og:url" content="{{ page.canonical_url }}" />
+  <meta property="og:image" content="https://gbvitrano.github.io/workshop-estate-gis-2021/imgs/EstateGISopendata_website.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="<https://mkdocs-gb.coseerobe.it/>" />
+  <meta name="twitter:creator" content="<Giovan Battista Vitrano>" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:description" content="{{ config.site_description }}" />
+  <meta name="twitter:image" content="https://gbvitrano.github.io/workshop-estate-gis-2021/imgs/EstateGISopendata_website.png" />
+<!-- Meta tags -->  
+  <meta name="keywords" content="calcolatore, campi, qgis, espressioni, funzioni, field calc, tabella, attributi, coordinate, hfcqgis, opendatasicilia,">  
+  <meta name="creation_Date" content="08/07/2021">
+  <meta property="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="RSS feed of created content" href="{{ config.site_url }}feed_rss_created.xml">
+  <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="{{ config.site_url }}feed_rss_updated.xml">
+  {% endblock %}
+  
+{% block content %}
+<!-- pulsante stampa -->	
+{% if page.url_to_print_page %}
+    <a href="{{ page.url_to_print_page }}" title="Stampa il sito in PDF" class="md-content__button md-icon">
+        {% include ".icons/material/printer.svg" %}
+    </a>
+{% endif %}
+ <!-- pulsante pdf -->
+{% if page.url_to_pdf %}
+<a href="{{ page.url_to_pdf }}" title="Scarica il PDF" class="md-content__button md-icon">
+        {% include ".icons/material/pdf-box.svg" %}
+    </a>
+	{% endif %}
+	
+{{ super() }}
+{% endblock content %}
