@@ -174,7 +174,7 @@ sub {
 sup {
   top: -0.5em;
 }
-
+/*
 a {
   color: #ff6e42;
   text-decoration: none;
@@ -182,7 +182,7 @@ a {
 a:hover {
   color: #ff6e42;
   text-decoration: underline;
-}
+}*/
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -11081,3 +11081,9 @@ table {
       margin-top: 0; }
     table tr th :last-child, table tr td :last-child {
       margin-bottom: 0; }
+	  
+	  /* link home*/
+.home {color: #ff6e42!important;	text-decoration:none;}
+.home a:link{color: #ff6e42!important;	text-decoration:none;}
+.home a:visited {	color: #ff6e42!important; text-decoration:none;}
+.home a:hover {color: #ff6e42!important; text-decoration:underline; } 
