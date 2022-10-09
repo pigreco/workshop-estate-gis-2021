@@ -307,7 +307,7 @@ Questa espressione personalizzata permette di estrarre i dati esposti dal WMS Ca
  WMS Catasto Agenzia delle Entrate CC BY 4.0
                               -------------------
         copyright            : (C) 2020 by Giulio Fattori
-        email                : giulio.fattori@tin.it
+        email                : xxxxx.xxxxxx@yyyyyy.sss
  ***************************************************************************/
 """
 
