@@ -1,0 +1,150 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+    <!--====== Jquery js ======-->
+    <script src="stylesheets/js/jquery-1.12.4.min.js"></script>
+
+    <!--====== Appear js ======-->
+    <script src="stylesheets/js/jquery.appear.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <!--====== Main js ======-->
+    <script src="stylesheets/js/main.js"></script>
+ <!-- Font Awesome icons (free version)  -->
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+ <!-- css home  -->
+<link rel="stylesheet" href="stylesheets/home.css">   
+
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="stylesheets/css/default.css">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="stylesheets/css/style.css">
+
+
+<!-- Qui il codice della homepage-->
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+<!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+           <!--      <div class="masthead-subheading">HfcQGIS</div>
+               <div class="masthead-heading text-uppercase">Help funzioni calcolatore di campi di QGIS</div> -->
+          
+            </div>
+        </header>
+        <!-- Services--><br>
+        <section class="page-section" id="services">
+              <div class="container">
+                <div class="text-center">
+                <h3 class="main_title">ESTATE GIS 2021</h3><br>
+  <h5 class="sub_title"><a class="home"  href="https://www.mastergiscience.it/2021/05/09/estate-gis-2021/" title="ESTATE GIS 2021 – Evento Moltiplicatore My Geo | Ciclo di seminari online per frequentare la GIScience anche d’estate" target="_blank">Evento Moltiplicatore My Geo | Ciclo di seminari online per frequentare la GIScience anche d’estate</a></h5> <br>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">Andrea Borruso, Salvatore Fiandaca</a>
+          <!-- <a class="btn btn-primary btn-xl text-uppercase" href="{{ config.repo_url }}" title="{{ lang.t('source.link.title') }}" class="md-button"> GitHub  </a> --><br>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1200);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+    <!--====== SERVICES PART START ======-->
+    <div class="container">
+                <div class="row align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-lg-12">
+                      <div class="header_hero_content mt-45">               
+                <p>Il <strong>Master in GIScience e Sistemi a Pilotaggio Remoto</strong> è lieto di invitarvi al <strong>Ciclo di seminari gratuiti e aperti al pubblico &ldquo;Estate GIS 2021 – GIS and Science per il clima, la società e il territorio&rdquo;</strong>.</p>
+   <p>Un ciclo di seminari e workshop per tutti coloro che vogliono avvicinarsi e approfondire il mondo dei Sistemi Informativi Geografici.</p>
+   <p>Sei appuntamenti dedicati alla GIScience, a partire da <strong>mercoledì 9 giugno </strong>fino al<strong> 30 agosto</strong>.</p>
+   <p>Estate GIS 2021 è l&rsquo;evento moltiplicatore italiano del progetto europeo Erasmus+ | <a class="home" href="https://www.mygeoproject.eu/" target="_blank">MyGeo: Geo tools for modernization and youth employement</a>.</p>
+                <p><strong>ESTATE GIS 2021:</strong> Seminari, laboratori geoinformatici e workshop per sensibilizzare e coinvolgere studenti e cittadini sul <strong>climate change</strong> e sugli <strong>impatti socio-ambientali delle attività antropiche su scala locale e globale</strong>, utilizzando la Geographical Information Science (<strong>GIScience</strong>) come strumento interdisciplinare di lettura e di divulgazione</p>
+   <p><span id="more-7541"> </span></p>
+                <h4 class="service_title">Programma</h4>           
+<p>9 giugno – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/06/locandina_OPENDATA.pdf" title="Dagli open data all&rsquo;open source: lavorare in QGIS con le mappe catastali</a></strong> (Andrea Borruso, Salvatore Fiandaca)" target="_blank">Dagli open data all&rsquo;open source: lavorare in QGIS con le mappe catastali</a></strong> (Andrea Borruso, Salvatore Fiandaca)<br>
+                  23 giugno – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/06/locandina_qgistoblender_mandolesi.pdf" title="Da QGIS a Blender: rilievi topografici dei beni culturali e progettazione urbana in 3D</a></strong> (Luca Mandolesi)" target="_blank">Da QGIS a Blender: rilievi topografici dei beni culturali e progettazione urbana in 3D</a></strong> (Luca Mandolesi)<br>
+                  7 luglio – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/06/locandina_LizMap_Fagandini.pdf" title="ebGIS open source: LizMap, QGIS Server e web tools&lt;/a&gt;&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;(Roberta Fagandini)" target="_blank">WebGIS open source: LizMap, QGIS Server e web tools</a></strong><strong> </strong>(Roberta Fagandini)<br>
+                  21 luglio – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/07/21july_agraser.pdf" title="Movement data analysis con MovingPandas" target="_blank">Movement data analysis con MovingPandas</a></strong> (Anita Graser)<br>
+                  4 agosto – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/07/4agosto_sicard_rettore.pdf" title="truttura agroecologica principale: pratiche agroecologiche ed ecologia del paesaggio con i GIS" target="_blank">Struttura agroecologica principale: pratiche agroecologiche ed ecologia del paesaggio con i GIS</a></strong> (Tomás Enrique León Sicard, Valentino Giorgio Rettore)<br>
+                  30 agosto | <strong>SAVE THE DATE!!</strong></p>
+          <p> Scarica la <strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/05/locandina_a3_complete_mygeo_estate_official.pdf" title="locandina" target="_blank">locandina</a> </strong>completa </p>
+                <p>ESTATE GIS 2021 –GIS and Science per il clima, la società e il territorio è un&rsquo;iniziativa finanziata con il contributo dell&rsquo;Università di Padova sui fondi previsti per le Iniziative culturali degli studenti e delle studentesse dell&rsquo;Università degli Studi di Padova</p>
+                <p><span id="more-7541"> </span></p>
+                <h4 class="service_title">IL PROGETTO EUROPEO – MYGEO</h4>
+                <p>Il progetto MY GEO è un&rsquo;iniziativa finanziata dalla Commissione Europea attraverso il Programma Erasmus+.<br>
+                  Il progetto mira a promuovere l&rsquo;occupazione dei giovani promuovendo l&rsquo;acquisizione di competenze chiave relative all&rsquo;uso di strumenti GIS (Geographic Information Systems).</p>
+                  <p><span id="more-7541"> </span></p>
+                <h5>Modalità di erogazione dei workshop | Estate GIS 2021</h5>
+                <p>Tutti i seminari si terranno in <strong>modalità online</strong> attraverso la piattaforma ZOOM. Qualche giorno prima dell&rsquo;evento sarà inviato il link per accedere al seminario.</p>
+                 <p><span id="more-7541"> </span></p>
+         <h5 class="service_title">Modalità d&rsquo;iscrizione</h5>         
+         <p>Per iscriversi è necessario compilare il seguente <a class="home" href="https://docs.google.com/forms/d/e/1FAIpQLScF6ZDfCEYxQMM2JwQXxMNIjPzeF0K3S7Waow1Y7rpHBN5WJQ/viewform?usp=sf_link" title="Per iscriversi è necessario compilare il seguente modulo" target="_blank"><strong>modulo</strong></a><strong>.</strong></p>
+   <p><span id="more-7541"> </span></p>
+                <h5 class="service_title">Prossimi aggiornamenti</h5>              
+                                        <p>Per restare continuamente aggiornato su tutte le iniziative del Master in GIScience e SPR:</p>
+                          <ul>
+                            <li>Pagina Facebook – <a class="home" href="https://www.facebook.com/MasterGIScience/" title="Master in GIScience e droni per la gestione del territorio" target="_blank"><strong>Master in GIScience e droni per la gestione del territorio</strong></a></li>
+                            <li>Instagram – <strong>@<a class="home" href="https://www.instagram.com/giscience_unipd/" title="giscience_unipd" target="_blank">giscience_unipd</a></strong></li>
+                            <li>YouTube – <a class="home" href="https://www.youtube.com/c/GIScienceTVMasterUnipd" title="GIScienceTV" target="_blank"><strong>GIScienceTV</strong></a></li>
+                            <li>Iscrizione alla <a class="home" href="http://eepurl.com/gdTM09" title="newsletter" target="_blank"><strong>newsletter</strong></a> (mensile)                          </li>
+                          </ul>              
+            </div></div></div></div> 
+{% endblock %}
+
+ <!--  {% block content %}{% endblock %} -->
+
+{% block footer %}
+<!-- Footer home page |  autore social licenza -->
+        <footer class="footer py-4">
+            <div class="container"> <hr  class="hr-hfc">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start"><a class="home" href="https://twitter.com/opendatasicilia" title="@opendatasicilia " target="_blank">By @opendatasicilia </a></div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                       <!-- icone social -->     
+<div class="social-icons">
+<!-- Social twitter -->	
+<a class="social-icon" href="https://twitter.com/opendatasicilia" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+<!-- Social facebook -->	
+<a class="social-icon"  href="https://www.facebook.com/groups/opendatasicilia/" title="FaceBook" target="_blank" ><i class="fab fa-facebook"></i></a>
+<!-- Social telegram -->	
+<a class="social-icon" href="https://t.me/opendatasicilia" title="Gruppo Telegram" target="_blank" ><i class="fab fa-telegram"></i></a>
+<!-- Social github -->
+	<a class="social-icon" href="https://github.com/opendatasicilia" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+<!-- Social ML -->                    
+<a class="social-icon" href="https://groups.google.com/d/forum/opendatasicilia" title="Google mailing list" target="_blank"><i class="fa fa-envelope"></i></a> 
+<!-- rss -->                    
+<a class="social-icon" href="https://materialmkdocs-gb.readthedocs.io/it/latest/feed_rss_created.xml" title="Feed RSS" target="_blank"><i class="fa fa-rss"></i></a> 
+ </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a> -->
+                        <a class="home" href="https://creativecommons.org/licenses/by-sa/4.0/!" title="Se non specificato diversamente, tutti i contenuti sono soggetti alla licenza Creative Commons Attribution-ShareAlike 4.0 licence (CC BY-SA)" target="_blank" >Licenza CC-BY-SA-4.0</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+{% endblock %}

@@ -1,0 +1,820 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando opendata e software Open Source. Realizzeremo un progetto QGIS utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin.">
+      
+      
+        <meta name="author" content="Salvatore Fiandaca">
+      
+      
+        <link rel="canonical" href="https://github.com/pigreco/workshop-estate-gis-2021/#piattaforme-e-software/">
+      
+      <link rel="icon" href="imgs/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Home Page - Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+ <!-- Qui Script header) --> 
+ <link href="../stylesheets/jquery-eu-cookie-law-popup.css" rel="stylesheet" type="text/css"/>
+ <!-- Qui Script footer) --> 
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b4bb82cddf7f677"></script>  
+ <!-- Qui Progress bar) --> 
+<script src="../stylesheets/jquery-3.1.1.min.js"></script>
+<script src="../stylesheets/prognroll.min.js"></script>
+<script>
+    $(function() {
+      $("body").prognroll({
+        height: 4, //Progress bar height in pixels
+        color: "#589632", //Progress bar background color
+      });
+    });
+</script> 
+<!-- eu-cookie-lawt -->
+<div class="eupopup eupopup-top "></div>
+<script src="../stylesheets/jquery-eu-cookie-law-popup.js"></script> 
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings1.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="css/print-site.css">
+    
+      <link rel="stylesheet" href="css/print-site-material.css">
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="stylesheets/gbextra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-122084242-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+ <!-- facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali - Home Page" />
+  <meta property="og:description" content="Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando opendata e software Open Source. Realizzeremo un progetto QGIS utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin." />
+  <meta property="og:url" content="https://github.com/pigreco/workshop-estate-gis-2021/#piattaforme-e-software/" />
+  <meta property="og:image" content="https://gbvitrano.github.io/workshop-estate-gis-2021/imgs/EstateGISopendata_website.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+<!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="<https://mkdocs-gb.coseerobe.it/>" />
+  <meta name="twitter:creator" content="<Giovan Battista Vitrano>" />
+  <meta name="twitter:title" content="Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali - Home Page" />
+  <meta name="twitter:description" content="Obiettivo di questo workshop è quello di evidenziare le potenzialità delle analisi geografiche usando opendata e software Open Source. Realizzeremo un progetto QGIS utilizzando, come fonte dei dati, il WMS dell'AdE e vedremo come aggiungere il servizio WMS, come estrarre i dati esposti usando il filed calc, e infine come digitalizzare velocemente le particelle catastali usando vari plugin." />
+  <meta name="twitter:image" content="https://gbvitrano.github.io/workshop-estate-gis-2021/imgs/EstateGISopendata_website.png" />
+<!-- Meta tags -->  
+  <meta name="keywords" content="calcolatore, campi, qgis, espressioni, funzioni, field calc, tabella, attributi, coordinate, hfcqgis, opendatasicilia,">  
+  <meta name="creation_Date" content="08/07/2021">
+  <meta property="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="RSS feed of created content" href="https://github.com/pigreco/workshop-estate-gis-2021/#piattaforme-e-softwarefeed_rss_created.xml">
+  <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="https://github.com/pigreco/workshop-estate-gis-2021/#piattaforme-e-softwarefeed_rss_updated.xml">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="." title="Dagli OpenData all&amp;rsquo;OpenSource&amp;#58; Lavorare in QGIG con le mappe catastali" class="md-header__button md-logo" aria-label="Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali" data-md-component="logo">
+      
+  <img src="imgs/logo_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home Page
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Condividi" aria-label="Condividi" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pigreco/workshop-estate-gis-2021/" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    workshop-estate-gis-2021
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="intro/" class="md-tabs__link">
+        Dagli OpenData all&rsquo;OpenSource
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="http://hfcqgis.opendatasicilia.it/" class="md-tabs__link">
+      HfcQGIS
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="ods/" class="md-tabs__link">
+      OpenDataSicilia
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="privacy/" class="md-tabs__link">
+      Informativa privacy estesa
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+
+        
+      
+    <!--====== Jquery js ======-->
+    <script src="stylesheets/js/jquery-1.12.4.min.js"></script>
+
+    <!--====== Appear js ======-->
+    <script src="stylesheets/js/jquery.appear.min.js"></script>
+    <!--====== Scrolling Nav js ======-->
+    <!--====== Main js ======-->
+    <script src="stylesheets/js/main.js"></script>
+ <!-- Font Awesome icons (free version)  -->
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+ <!-- css home  -->
+<link rel="stylesheet" href="stylesheets/home.css">   
+
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="stylesheets/css/default.css">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="stylesheets/css/style.css">
+
+
+<!-- Qui il codice della homepage-->
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+<!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+           <!--      <div class="masthead-subheading">HfcQGIS</div>
+               <div class="masthead-heading text-uppercase">Help funzioni calcolatore di campi di QGIS</div> -->
+          
+            </div>
+        </header>
+        <!-- Services--><br>
+        <section class="page-section" id="services">
+              <div class="container">
+                <div class="text-center">
+                <h3 class="main_title">ESTATE GIS 2021</h3><br>
+  <h5 class="sub_title"><a class="home"  href="https://www.mastergiscience.it/2021/05/09/estate-gis-2021/" title="ESTATE GIS 2021 – Evento Moltiplicatore My Geo | Ciclo di seminari online per frequentare la GIScience anche d’estate" target="_blank">Evento Moltiplicatore My Geo | Ciclo di seminari online per frequentare la GIScience anche d’estate</a></h5> <br>
+                <a class="btn btn-primary btn-xl text-uppercase" href="intro/" title="Introduzione" class="md-button md-button--primary">Andrea Borruso, Salvatore Fiandaca</a>
+          <!-- <a class="btn btn-primary btn-xl text-uppercase" href="https://github.com/pigreco/workshop-estate-gis-2021/" title="Apri repository" class="md-button"> GitHub  </a> --><br>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1200);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+    <!--====== SERVICES PART START ======-->
+    <div class="container">
+                <div class="row align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-lg-12">
+                      <div class="header_hero_content mt-45">               
+                <p>Il <strong>Master in GIScience e Sistemi a Pilotaggio Remoto</strong> è lieto di invitarvi al <strong>Ciclo di seminari gratuiti e aperti al pubblico &ldquo;Estate GIS 2021 – GIS and Science per il clima, la società e il territorio&rdquo;</strong>.</p>
+   <p>Un ciclo di seminari e workshop per tutti coloro che vogliono avvicinarsi e approfondire il mondo dei Sistemi Informativi Geografici.</p>
+   <p>Sei appuntamenti dedicati alla GIScience, a partire da <strong>mercoledì 9 giugno </strong>fino al<strong> 30 agosto</strong>.</p>
+   <p>Estate GIS 2021 è l&rsquo;evento moltiplicatore italiano del progetto europeo Erasmus+ | <a class="home" href="https://www.mygeoproject.eu/" target="_blank">MyGeo: Geo tools for modernization and youth employement</a>.</p>
+                <p><strong>ESTATE GIS 2021:</strong> Seminari, laboratori geoinformatici e workshop per sensibilizzare e coinvolgere studenti e cittadini sul <strong>climate change</strong> e sugli <strong>impatti socio-ambientali delle attività antropiche su scala locale e globale</strong>, utilizzando la Geographical Information Science (<strong>GIScience</strong>) come strumento interdisciplinare di lettura e di divulgazione</p>
+   <p><span id="more-7541"> </span></p>
+                <h4 class="service_title">Programma</h4>           
+<p>9 giugno – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/06/locandina_OPENDATA.pdf" title="Dagli open data all&rsquo;open source: lavorare in QGIS con le mappe catastali</a></strong> (Andrea Borruso, Salvatore Fiandaca)" target="_blank">Dagli open data all&rsquo;open source: lavorare in QGIS con le mappe catastali</a></strong> (Andrea Borruso, Salvatore Fiandaca)<br>
+                  23 giugno – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/06/locandina_qgistoblender_mandolesi.pdf" title="Da QGIS a Blender: rilievi topografici dei beni culturali e progettazione urbana in 3D</a></strong> (Luca Mandolesi)" target="_blank">Da QGIS a Blender: rilievi topografici dei beni culturali e progettazione urbana in 3D</a></strong> (Luca Mandolesi)<br>
+                  7 luglio – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/06/locandina_LizMap_Fagandini.pdf" title="ebGIS open source: LizMap, QGIS Server e web tools&lt;/a&gt;&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;(Roberta Fagandini)" target="_blank">WebGIS open source: LizMap, QGIS Server e web tools</a></strong><strong> </strong>(Roberta Fagandini)<br>
+                  21 luglio – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/07/21july_agraser.pdf" title="Movement data analysis con MovingPandas" target="_blank">Movement data analysis con MovingPandas</a></strong> (Anita Graser)<br>
+                  4 agosto – 17.30/19.30<br><strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/07/4agosto_sicard_rettore.pdf" title="truttura agroecologica principale: pratiche agroecologiche ed ecologia del paesaggio con i GIS" target="_blank">Struttura agroecologica principale: pratiche agroecologiche ed ecologia del paesaggio con i GIS</a></strong> (Tomás Enrique León Sicard, Valentino Giorgio Rettore)<br>
+                  30 agosto | <strong>SAVE THE DATE!!</strong></p>
+          <p> Scarica la <strong><a class="home" href="https://www.mastergiscience.it/wp-content/uploads/2021/05/locandina_a3_complete_mygeo_estate_official.pdf" title="locandina" target="_blank">locandina</a> </strong>completa </p>
+                <p>ESTATE GIS 2021 –GIS and Science per il clima, la società e il territorio è un&rsquo;iniziativa finanziata con il contributo dell&rsquo;Università di Padova sui fondi previsti per le Iniziative culturali degli studenti e delle studentesse dell&rsquo;Università degli Studi di Padova</p>
+                <p><span id="more-7541"> </span></p>
+                <h4 class="service_title">IL PROGETTO EUROPEO – MYGEO</h4>
+                <p>Il progetto MY GEO è un&rsquo;iniziativa finanziata dalla Commissione Europea attraverso il Programma Erasmus+.<br>
+                  Il progetto mira a promuovere l&rsquo;occupazione dei giovani promuovendo l&rsquo;acquisizione di competenze chiave relative all&rsquo;uso di strumenti GIS (Geographic Information Systems).</p>
+                  <p><span id="more-7541"> </span></p>
+                <h5>Modalità di erogazione dei workshop | Estate GIS 2021</h5>
+                <p>Tutti i seminari si terranno in <strong>modalità online</strong> attraverso la piattaforma ZOOM. Qualche giorno prima dell&rsquo;evento sarà inviato il link per accedere al seminario.</p>
+                 <p><span id="more-7541"> </span></p>
+         <h5 class="service_title">Modalità d&rsquo;iscrizione</h5>         
+         <p>Per iscriversi è necessario compilare il seguente <a class="home" href="https://docs.google.com/forms/d/e/1FAIpQLScF6ZDfCEYxQMM2JwQXxMNIjPzeF0K3S7Waow1Y7rpHBN5WJQ/viewform?usp=sf_link" title="Per iscriversi è necessario compilare il seguente modulo" target="_blank"><strong>modulo</strong></a><strong>.</strong></p>
+   <p><span id="more-7541"> </span></p>
+                <h5 class="service_title">Prossimi aggiornamenti</h5>              
+                                        <p>Per restare continuamente aggiornato su tutte le iniziative del Master in GIScience e SPR:</p>
+                          <ul>
+                            <li>Pagina Facebook – <a class="home" href="https://www.facebook.com/MasterGIScience/" title="Master in GIScience e droni per la gestione del territorio" target="_blank"><strong>Master in GIScience e droni per la gestione del territorio</strong></a></li>
+                            <li>Instagram – <strong>@<a class="home" href="https://www.instagram.com/giscience_unipd/" title="giscience_unipd" target="_blank">giscience_unipd</a></strong></li>
+                            <li>YouTube – <a class="home" href="https://www.youtube.com/c/GIScienceTVMasterUnipd" title="GIScienceTV" target="_blank"><strong>GIScienceTV</strong></a></li>
+                            <li>Iscrizione alla <a class="home" href="http://eepurl.com/gdTM09" title="newsletter" target="_blank"><strong>newsletter</strong></a> (mensile)                          </li>
+                          </ul>              
+            </div></div></div></div> 
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Dagli OpenData all&amp;rsquo;OpenSource&amp;#58; Lavorare in QGIG con le mappe catastali" class="md-nav__button md-logo" aria-label="Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali" data-md-component="logo">
+      
+  <img src="imgs/logo_white.svg" alt="logo">
+
+    </a>
+    Dagli OpenData all&rsquo;OpenSource&#58; Lavorare in QGIG con le mappe catastali
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pigreco/workshop-estate-gis-2021/" title="Apri repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    workshop-estate-gis-2021
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Dagli OpenData all&rsquo;OpenSource
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dagli OpenData all&rsquo;OpenSource" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dagli OpenData all&rsquo;OpenSource
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Lavorare in QGIG con le mappe catastali
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lavorare in QGIG con le mappe catastali" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Lavorare in QGIG con le mappe catastali
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="qgis_ade/" class="md-nav__link">
+        QGIS e il WMS AdE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wms_catasto/" class="md-nav__link">
+        WMS Catasto AdE in QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="risultati/" class="md-nav__link">
+        Risultati evento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="repo/" class="md-nav__link">
+        Cosa c&rsquo;è in questo repo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contatti/" class="md-nav__link">
+        Contatti
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://hfcqgis.opendatasicilia.it/" class="md-nav__link">
+        HfcQGIS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ods/" class="md-nav__link">
+        OpenDataSicilia
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="privacy/" class="md-nav__link">
+        Informativa privacy estesa
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Torna su
+          </a>
+        
+      </main>
+      
+<!-- Footer home page |  autore social licenza -->
+        <footer class="footer py-4">
+            <div class="container"> <hr  class="hr-hfc">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start"><a class="home" href="https://twitter.com/opendatasicilia" title="@opendatasicilia " target="_blank">By @opendatasicilia </a></div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                       <!-- icone social -->     
+<div class="social-icons">
+<!-- Social twitter -->	
+<a class="social-icon" href="https://twitter.com/opendatasicilia" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+<!-- Social facebook -->	
+<a class="social-icon"  href="https://www.facebook.com/groups/opendatasicilia/" title="FaceBook" target="_blank" ><i class="fab fa-facebook"></i></a>
+<!-- Social telegram -->	
+<a class="social-icon" href="https://t.me/opendatasicilia" title="Gruppo Telegram" target="_blank" ><i class="fab fa-telegram"></i></a>
+<!-- Social github -->
+	<a class="social-icon" href="https://github.com/opendatasicilia" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+<!-- Social ML -->                    
+<a class="social-icon" href="https://groups.google.com/d/forum/opendatasicilia" title="Google mailing list" target="_blank"><i class="fa fa-envelope"></i></a> 
+<!-- rss -->                    
+<a class="social-icon" href="https://materialmkdocs-gb.readthedocs.io/it/latest/feed_rss_created.xml" title="Feed RSS" target="_blank"><i class="fa fa-rss"></i></a> 
+ </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a> -->
+                        <a class="home" href="https://creativecommons.org/licenses/by-sa/4.0/!" title="Se non specificato diversamente, tutti i contenuti sono soggetti alla licenza Creative Commons Attribution-ShareAlike 4.0 licence (CC BY-SA)" target="_blank" >Licenza CC-BY-SA-4.0</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "search.share", "search.suggest"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.config.lang": "it", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Cerca", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version.title": "Seleziona la versione"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+        <script src="stylesheets/extra.js"></script>
+      
+    
+  </body>
+</html>
