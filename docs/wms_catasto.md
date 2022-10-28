@@ -170,7 +170,7 @@ particella | virtuale | `regexp_replace("catasto",'^(.+)\\.(.+)\\.(.+)\\.(.+)_(.
 
 ### casi possibili
 
-vedi: `Note sulla codifica dell’output della query al WMS dell’Agenzia delle Entrate` presenti [in questo ottimo blog](https://medium.com/tantotanto/le-mappa-castali-diventano-finalmente-utilizzabili-821db2f84533) post di [Andrea Borruso](https://twitter.com/aborruso)
+vedi: `Note sulla codifica dell’output della query al WMS dell’Agenzia delle Entrate` presenti [in questo ottimo blog](https://medium.com/tantotanto/le-mappa-castali-diventano-finalmente-utilizzabili-821db2f84533#9547) post di [Andrea Borruso](https://twitter.com/aborruso)
 
 1. `IT.AGE.PLA.G273_011800.485` caso senza sezione
 2. `IT.AGE.PLA.B354A0018V0.2261` caso con sezione
