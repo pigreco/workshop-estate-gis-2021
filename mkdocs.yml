@@ -16,7 +16,7 @@ copyright: <a href="https://twitter.com/opendatasicilia" title="@opendatasicilia
 extra:
   manifest: "manifest.webmanifest"
   social:
-    - icon: fontawesome/solid/home
+    - icon: fontawesome/solid/house
       link: https://pigreco.github.io/workshop-estate-gis-2021/
     - icon: fontawesome/brands/twitter
       link: http://twitter.com/opendatasicilia
